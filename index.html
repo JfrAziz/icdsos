@@ -7,11 +7,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <title>ICDSOS : International Conference on Data Science and Official Statistics</title>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header nav a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+    }
+
+    #main {
+      background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('polstat.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    #main h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      color: white;
+    }
+
+    #main p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
-  <header class="text-gray-600 body-font">
+  <header class="text-gray-600 body-font bg-transparent">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
@@ -19,9 +56,9 @@
           viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
         </svg>
-        <span class="ml-3 text-xl">ICDSOS 2021</span>
+        <span class="text-white ml-3 text-xl">ICDSOS 2021</span>
       </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <nav class="text-white invisible md:visible md:ml-auto flex flex-wrap items-center text-base justify-center">
         <a href="#keynote" class="mr-5 hover:text-gray-900">Key Note Speaker</a>
         <a href="#call-for-papers" class="mr-5 hover:text-gray-900">Call For Pappers</a>
         <a href="#fee" class="mr-5 hover:text-gray-900">Fee</a>
@@ -31,32 +68,27 @@
     </div>
   </header>
 
-  <div class="max-w-screen-xl mx-auto">
-
-    <section class="text-gray-600 body-font">
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div
-          class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 class="title-font leading-10 sm:text-4xl text-3xl mb-4 font-medium text-gray-900">International Conference
+  <div class="max-w-screen max-h-full">
+    <section id="main" class="px-4 text-gray-600 w-full h-screen -mt-36 md:-mt-20">
+      <div class="container mx-auto flex h-full w-full justify-center flex-col items-center">
+          <h1 class="title-font text-center leading-10 sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+            International Conference
             on Data
             <br class="hidden lg:inline-block">Science and Official Statistics (ICDSOS)
           </h1>
-          <p class="mb-8 leading-relaxed">
+          <p class="text-center mb-8">
             Strengthening The Contribution of Data Science and Official Statistics To The Society in The Disruption Era
           </p>
           <div class="flex justify-center">
             <button
               class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">About
               The Event</button>
-          </div>
-        </div>
-        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
         </div>
       </div>
     </section>
 
-    <section id="keynote" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" class="text-gray-600 body-font">
+    <section id="keynote" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"
+      class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-col text-center w-full mb-20">
           <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Key Note Speaker</h1>
@@ -94,7 +126,8 @@
       </div>
     </section>
 
-    <section id="timeline" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" class="text-gray-600 body-font py-20">
+    <section id="timeline" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"
+      class="text-gray-600 body-font py-20">
       <div class="flex flex-col text-center w-full mb-20">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Important Dates</h1>
       </div>
@@ -190,7 +223,8 @@
       </div>
     </section>
 
-    <section id="call-for-papers" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" class="text-gray-600 body-font pt-20">
+    <section id="call-for-papers" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"
+      class="text-gray-600 body-font pt-20">
       <div class="container px-5 mx-auto">
         <div class="text-center mb-10">
           <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Call For Papers</h1>
@@ -445,7 +479,8 @@
       </div>
     </section>
 
-    <section id="fee" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" class="text-gray-600 body-font">
+    <section id="fee" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"
+      class="text-gray-600 body-font">
       <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
         <div class="text-center lg:w-2/3 w-full">
           <h1 class="title-font sm:text-4xl text-3xl mb-5 font-medium text-gray-900">Fee</h1>
@@ -472,7 +507,8 @@
     </section>
 
 
-    <section id="register" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" class="text-gray-600 body-font">
+    <section id="register" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"
+      class="text-gray-600 body-font">
       <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
         <div class="text-center lg:w-2/3 w-full">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Register</h1>
@@ -494,7 +530,8 @@
       </div>
     </section>
 
-    <section id="contact-us" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000" class="text-gray-600 body-font mt-20">
+    <section id="contact-us" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"
+      class="text-gray-600 body-font mt-20">
       <div class="container px-5 pb-20 mx-auto">
         <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">Contact US
         </h1>
