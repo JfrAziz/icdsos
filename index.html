@@ -11,15 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap"
     rel="stylesheet">
   <title>ICDSOS : International Conference on Data Science and Official Statistics</title>
-  <meta name="description" content="ICDSOS : Strengthening The Contribution of Data Science and Official Statistics To The Society in The Disruption Era">
+  <meta name="description"
+    content="ICDSOS : Strengthening The Contribution of Data Science and Official Statistics To The Society in The Disruption Era">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    header nav a {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 300;
+    header:not(.scroll) {
+      color: white;
     }
 
     header.scroll {
@@ -27,9 +24,6 @@
       box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
     }
 
-    header:not(.scroll) {
-      color: white;
-    }
 
     #main {
       background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('polstat.jpg');
@@ -50,10 +44,11 @@
 </head>
 
 <body>
-  <header id="header"
-    class="text-gray-600 body-font bg-transparent fixed z-50 w-full top-0 transition duration-500 ease">
-    <div class="container mx-auto flex flex-wrap px-5 py-3 flex-row items-center">
-      <a class="flex title-font font-medium items-center md:mb-0">
+  <header class="text-gray-700 body-font bg-transparent fixed z-50 w-full top-0 transition duration-500 ease"
+    x-data="headerData" :class="{ scroll : onTop}" @scroll.window="onTop = isOnTop()">
+    <div class="container mx-auto flex flex-wrap px-5 py-3 flex-row items-center max-w-screen-xl mx-auto">
+      <!-- logo -->
+      <a href="/index.html" class="flex title-font font-medium items-center md:mb-0">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
           stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
           viewBox="0 0 24 24">
@@ -61,21 +56,50 @@
         </svg>
         <span class="ml-3 text-xl">ICDSOS 2021</span>
       </a>
+      <!-- end logo -->
+      <!-- default navbar -->
       <nav class="hidden md:flex md:ml-auto flex-wrap items-center text-base justify-center">
-        <a href="#keynote" class="mr-5 hover:text-gray-500">Key Note Speaker</a>
-        <a href="#call-for-papers" class="mr-5 hover:text-gray-500">Call For Pappers</a>
-        <a href="#fee" class="mr-5 hover:text-gray-500">Fee</a>
-        <a href="#register" class="mr-5 hover:text-gray-500">Register</a>
-        <a href="#contact-us" class="mr-5 hover:text-gray-500">Contact Us</a>
+        <a href="/speaker.html" class="mr-5 hover:text-gray-500">INVITED SPEAKER</a>
+        <a href="/commitee.html" class="mr-5 hover:text-gray-500">COMMITEE</a>
       </nav>
+      <!-- end default navbar -->
+      <!-- humberger button -->
+      <button class="md:hidden ml-auto flex flex-col p-1 items-center" @click="navOpen = !navOpen">
+        <template x-for="i in 3">
+          <span class="w-6 h-1 bg-gray-700 mb-1"></span>
+        </template>
+      </button>
+      <!-- end humberger button -->
+      <!-- sidebar for small screen -->
+      <div class="fixed flex md:hidden z-40 h-full top-0 left-0 shadow-lg bg-white transition-all duration-300 ease"
+        x-show="navOpen" @click.away="navOpen = false" x-transition:enter-start="-left-72"
+        x-transition:enter-end="left-0" x-transition:leave-start="left-0" x-transition:leave-end="-left-72">
+        <div class="flex flex-row justify-around">
+          <nav class="w-72 h-screen mt-10 px-3 ">
+            <a href="/speaker.html"
+              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+              <span class="mx-4 text-lg font-normal">
+                INVITED SPEAKER
+              </span>
+            </a>
+            <a href="/commitee.html"
+              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+              <span class="mx-4 text-lg font-normal">
+                COMMITEE
+              </span>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <!-- end sidebar for small screen -->
     </div>
   </header>
-
 
   <section id="main"
     class="flex items-center justify-center h-screen bg-fixed bg-center bg-cover custom-img px-4 text-gray-600">
     <div>
-      <h1 class="title-font text-center leading-10 sm:text-4xl text-3xl mb-4 font-medium text-gray-900" style="line-height: 3rem;">
+      <h1 class="title-font text-center leading-10 sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
+        style="line-height: 3rem;">
         International Conference
         on Data
         <br class="hidden lg:inline-block">Science and Official Statistics (ICDSOS)
@@ -85,151 +109,129 @@
       </p>
       <div class="flex justify-center">
         <button
-          class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">About
-          The Event</button>
+          class="text-indigo-500 bg-transparent border border-solid border-blue-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1"
+          type="button" style="transition: all .15s ease">
+          November, 13<sup>th</sup> - 14<sup>th</sup> 2021
+        </button>
       </div>
     </div>
   </section>
 
-  <div class="max-w-screen-xl m-auto max-h-full">
-    <section id="keynote" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500"
-      class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-20">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Key Note Speaker</h1>
-          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Here are some of our speakers</p>
-        </div>
-        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 justify-center">
-          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-            <div class="rounded-lg h-128 overflow-hidden">
-              <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/500x500">
-            </div>
-            <h2 class="text-lg text-center font-medium title-font text-gray-900 mt-5">Mr. John Doe</h2>
-            <p class="text-base leading-relaxed mt-2 text-center text-gray-500">
-              Head of
-            </p>
-          </div>
-          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-            <div class="rounded-lg h-128 overflow-hidden">
-              <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/500x500">
-            </div>
-            <h2 class="text-lg text-center font-medium title-font text-gray-900 mt-5">Mr. John Doe</h2>
-            <p class="text-base leading-relaxed mt-2 text-center text-gray-500">
-              Head of
-            </p>
-          </div>
-          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-            <div class="rounded-lg h-128 overflow-hidden">
-              <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/500x500">
-            </div>
-            <h2 class="text-lg text-center font-medium title-font text-gray-900 mt-5">Mr. John Doe</h2>
-            <p class="text-base leading-relaxed mt-2 text-center text-gray-500">
-              Head of
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8"
+          viewBox="0 0 975.036 975.036">
+          <path
+            d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+          </path>
+        </svg>
+        <p class="leading-relaxed text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sint quibusdam pariatur culpa ad nam dignissimos
+          ut error inventore eaque, molestiae laudantium minus ducimus laboriosam. Reiciendis labore iste voluptatem
+          repellendus.</p>
+        <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="max-w-screen-xl m-auto max-h-full">
     <section id="timeline" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500"
       class="text-gray-600 body-font py-20">
       <div class="flex flex-col text-center w-full mb-20">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Important Dates</h1>
       </div>
-      <div class="container px-5 pb-24 mx-auto flex flex-wrap">
-        <div class="flex flex-wrap w-full">
-          <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
-            <div class="flex relative pb-12">
-              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-              </div>
-              <div
-                class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <div class="flex-grow pl-4">
-                <h2 class="font-medium title-font text-md text-gray-900 mb-1 tracking-wider">Deadline of Paper
-                  Submission</h2>
-                <p class="leading-relaxed">June 1<sup>st</sup> - August 31<sup>st</sup> 2021</p>
-              </div>
+      <div class="container mx-auto w-full">
+        <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2">
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div
+              class="bg-red-400 border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
+              <h3 class="font-semibold font-bold text-white text-xl mb-1">Deadline of Paper Submission</h3>
+              <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
+                June 1<sup>st</sup> - August 31<sup>st</sup> 2021
+              </p>
             </div>
-            <div class="flex relative pb-12">
-              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
               </div>
-              <div
-                class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-              </div>
-              <div class="flex-grow pl-4">
-                <h2 class="font-medium title-font text-md text-gray-900 mb-1 tracking-wider">Notification of Acceptance
-                </h2>
-                <p class="leading-relaxed">October 1<sup>st</sup>, 2021</p>
-              </div>
-            </div>
-            <div class="flex relative pb-12">
-              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-              </div>
-              <div
-                class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-              </div>
-              <div class="flex-grow pl-4">
-                <h2 class="font-medium title-font text-md text-gray-900 mb-1 tracking-wider">Deadline for Camera
-                  Ready/Final Version</h2>
-                <p class="leading-relaxed">October 24<sup>th</sup>, 2021</p>
-              </div>
-            </div>
-            <div class="flex relative pb-12">
-              <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-              </div>
-              <div
-                class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-              </div>
-              <div class="flex-grow pl-4">
-                <h2 class="font-medium title-font text-md text-gray-900 mb-1 tracking-wider">Deadline for Slide and
-                  Recording Submission</h2>
-                <p class="leading-relaxed">November 1<sup>st</sup>, 2021</p>
-              </div>
-            </div>
-            <div class="flex relative">
-              <div
-                class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                  <path d="M22 4L12 14.01l-3-3"></path>
-                </svg>
-              </div>
-              <div class="flex-grow pl-4">
-                <h2 class="font-medium title-font text-md text-gray-900 mb-1 tracking-wider">Conference Day</h2>
-                <p class="leading-relaxed">November 13<sup>th</sup> - 14<sup>th</sup> 2021</p>
-              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
             </div>
           </div>
-          <img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
-            src="https://dummyimage.com/1200x500" alt="step">
+          <!-- right -->
+          <div class="flex md:contents">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
+            </div>
+            <div class="bg-white border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 class="mb-3 font-bold text-gray-600 text-xl">Notification of Acceptance</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                October 24<sup>th</sup>, 2021</p>
+              </p>
+            </div>
+          </div>
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div
+              class="bg-white border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
+              <h3 class="font-semibold font-bold text-gray-600 text-xl mb-1">Deadline for Camera
+                Ready/Final Version</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                October 24<sup>th</sup>, 2021
+              </p>
+            </div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="flex md:contents">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
+            </div>
+            <div class="bg-red-400 border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 class="mb-3 font-bold text-white text-xl">Deadline for Slide and
+                Recording Submission</h3>
+              <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
+                November 1<sup>st</sup>, 2021</p>
+              </p>
+            </div>
+          </div>
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div
+              class="bg-white border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
+              <h3 class="font-semibold font-bold text-gray-600 text-xl mb-1">Conference Day</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                November 13<sup>th</sup> - 14<sup>th</sup> 2021
+              </p>
+            </div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+
     <section id="call-for-papers" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500"
-      class="text-gray-600 body-font pt-20">
+      class="text-gray-600 body-font">
       <div class="container px-5 py-12 mx-auto">
         <div class="text-center mb-10">
           <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Call For Papers</h1>
@@ -535,7 +537,6 @@
                 NON-PRESENTING PARTICIPANT<br>REGISTRATION</h2>
               <h2 class="font-medium text-lg text-gray-900 my-4 text-center">
                 FREE*</h2>
-              <p class="text-sm">*There is cost for selected paper to publish</p>
             </div>
           </div>
         </div>
@@ -669,7 +670,7 @@
           <span class="ml-3 text-xl">ICDSOS</span>
         </a>
         <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2021
-          ICDSOS  @ <strong><a href="http://stis.ac.id">Politeknik Statistika STIS</a></strong>
+          ICDSOS @ <strong><a href="http://stis.ac.id">Politeknik Statistika STIS</a></strong>
         </p>
       </div>
     </footer>
@@ -677,18 +678,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init();
-    let myHeader = document.getElementById("header");
-
-    window.onscroll = function () {
-      "use strict";
-      const headerHeight = 80;
-      const onTop = document.body.scrollTop >= headerHeight || document.documentElement.scrollTop >= headerHeight
-      if (onTop) {
-        myHeader.classList.add("scroll");
-      } else {
-        myHeader.classList.remove("scroll");
-      }
-    };
+    const headerData = { onTop: false, navOpen: false }
+    const isOnTop = () => document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80
   </script>
 </body>
 
