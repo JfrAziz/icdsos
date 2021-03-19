@@ -76,50 +76,32 @@
 
   <div class="max-w-screen-xl m-auto max-h-full">
 
-    <section class="text-gray-600 body-font" x-data>
+    <section class="text-gray-600 body-font" x-data="commiteeData">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-20" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+        <!-- <div class="flex flex-col text-center w-full mb-20" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
           <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">COMMITTEES</h1>
           <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem, ipsum dolor sit amet consectetur adipisicing
             elit. Dolorum vero recusandae omnis iste sequi perferendis aut reiciendis obcaecati excepturi ipsa
             temporibus molestias placeat nulla, fugiat assumenda. Voluptatum dolorum dolores cupiditate!</p>
-        </div>
+        </div> -->
 
         <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-          <div class="flex flex-col text-center w-full mt-20 mb-10">
-            <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">COMMITTEES</h1>
-          </div>
-          <div class="flex flex-wrap -m-2">
-            <template x-for="i in 10">
-              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                  <img alt="team"
-                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                    src="https://dummyimage.com/80x80">
-                  <div class="flex-grow">
-                    <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                    <p class="text-gray-500">UI Designer</p>
-                  </div>
-                </div>
-              </div>
-            </template>
-          </div>
-        </div>
-
-        <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-          <div class="flex flex-col text-center w-full mt-20 mb-10">
+          <div class="flex flex-col text-center w-full mb-10">
             <h3 class="text-2xl font-medium title-font mb-4 text-gray-900">COMMITTEES</h3>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem, ipsum dolor sit amet consectetur adipisicing
+              elit. Dolorum vero recusandae omnis iste sequi perferendis aut reiciendis obcaecati excepturi ipsa
+              temporibus molestias placeat nulla, fugiat assumenda. Voluptatum dolorum dolores cupiditate!</p>
           </div>
           <div class="flex flex-wrap -m-2">
-            <template x-for="i in 10">
+            <template x-for="i in commitee">
               <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
                 <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
                   <img alt="team"
                     class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
                     src="https://dummyimage.com/80x80">
                   <div class="flex-grow">
-                    <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
-                    <p class="text-gray-500">UI Designer</p>
+                    <h2 class="text-gray-900 title-font font-medium" x-text="i.name"></h2>
+                    <p class="text-gray-500" x-text="i.position"></p>
                   </div>
                 </div>
               </div>
@@ -245,6 +227,130 @@
     AOS.init();
     const headerData = { onTop: false, navOpen: false }
     const isOnTop = () => document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80
+    const commiteeData = {
+      commitee: [
+        {
+          name: "Dr. Erni Tri Astuti, M. Math",
+          position : "Director"
+        },
+        {
+          name: "Dr. Hardius Usman, S.Si., M.Si",
+          position : "Advisor"
+        },
+        {
+          name: "Titik Harsanti, M.Si",
+          position : "Advisor"
+        },
+        {
+          name: "Ir. Agus Purwoto, M.Si",
+          position : "Advisor"
+        },
+        {
+          name: "Dr. Nasrudin, S.Si., ME",
+          position : "Person in Charge"
+        },
+        {
+          name: "Dr. Eng. Arie Wahyu Wijayanto, SST., M.T",
+          position : "Chairman"
+        },
+        {
+          name: "Dr. Rindang Bangun Prasetyo, SST., M.Si",
+          position : "Administrative Coordinator"
+        },
+        {
+          name: "Aisyah Fitri Yuniasih, SST., SE., M.Si",
+          position : "Secretariat"
+        },
+        {
+          name: "Claudya Muna Asmarani, S.Tr.Stat",
+          position : "Secretariat"
+        },
+        {
+          name: "Luci Wulansari, S.Si, M.SE",
+          position : "Treasurer"
+        },
+        {
+          name: "Tria Merina, SST",
+          position : "Treasurer"
+        },
+        {
+          name: "Ika Yuni Wulansari, S.ST., M.Stat",
+          position : "Event Section"
+        },
+        {
+          name: "Nucke Widowati Kusumo P., S.Si., M.Sc., Ph.D",
+          position : "Event Section"
+        },
+        {
+          name: "Lia Yuliana, S.Si, M.T",
+          position : "Event Section"
+        },
+        {
+          name: "Yuliagnis Transver Wijaya, SST., M.Sc",
+          position : "Event Section"
+        },
+        {
+          name: "Ibnu Santoso, SST., M.T",
+          position : "IT and Communication Section"
+        },
+        {
+          name: "Takdir, SST.,M.T",
+          position : "IT and Communication Section"
+        },
+        {
+          name: "Geri Yesa Ermawan, S.Tr.Stat",
+          position : "IT and Communication Section"
+        },
+        {
+          name: "Rahadi Jalu Yoga Utama, S.Tr.Stat",
+          position : "IT and Communication Section"
+        },
+        {
+          name: "Muhammad Luqman, S.Tr.Stat",
+          position : "IT and Communication Section"
+        },
+        {
+          name: "Isfan Nur Fauzi, S.Tr.Stat",
+          position : "IT and Communication Section"
+        },
+        {
+          name: "Nori Wilantika, SST., M.T.I",
+          position : "Proceedings and Publications Section"
+        },
+        {
+          name: "Febri Wicaksono, SST., M.Si",
+          position : "Proceedings and Publications Section"
+        },
+        {
+          name: "Dr. Rita Yuliana, S.Si., M.SE",
+          position : "Proceedings and Publications Section"
+        },
+        {
+          name: "Lutfi Rahmatuti Maghfiroh, SST., M.T",
+          position : "Manuscript Management Section"
+        },
+        {
+          name: "Dr. Tiodora Hadumaon Siagian, M.Pop.Hum.Res",
+          position : "Manuscript Management Section"
+        },
+        {
+          name: "Yunarso Anang Sulistiadi, Ph.D",
+          position : "Manuscript Management Section"
+        },
+        {
+          name: "Dr. Azka Ubaidillah",
+          position : "Manuscript Management Section"
+        },
+        {
+          name: "Siskarossa Ika Oktora, SST., M.Stat",
+          position : "Public Relations and Documentation Section"
+        },
+        {
+          name: "Nofita Istiana, SST., M.Stat",
+          position : "Public Relations and Documentation Section"
+        },
+      ]
+    }
   </script>
 </body>
 
