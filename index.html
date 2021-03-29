@@ -26,7 +26,7 @@
 
 
     #main {
-      background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('polstat.jpg');
+      background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('/src/polstat.jpg');
     }
 
     #main h1 {
@@ -58,20 +58,24 @@
       </a>
       <!-- end logo -->
       <!-- default navbar -->
-      <nav class="hidden md:flex md:ml-auto flex-wrap items-center text-base justify-center">
-        <a href="/speaker.html" class="mr-5 hover:text-gray-500">INVITED SPEAKER</a>
+      <nav class="hidden xl:flex xl:ml-auto flex-wrap items-center text-base justify-center">
+        <a href="/speaker.html" class="mr-5 hover:text-gray-500">SPEAKER</a>
+        <a href="/registration.html" class="mr-5 hover:text-gray-500">REGISTRATION</a>
+        <a href="/publication.html" class="mr-5 hover:text-gray-500">PUBLICATIONS</a>
+        <a href="/dates.html" class="mr-5 hover:text-gray-500">IMPORTANT DATES</a>
+        <a href="/program.html" class="mr-5 hover:text-gray-500">PROGRAM</a>
         <a href="/commitee.html" class="mr-5 hover:text-gray-500">COMMITEE</a>
       </nav>
       <!-- end default navbar -->
       <!-- humberger button -->
-      <button class="md:hidden ml-auto flex flex-col p-1 items-center" @click="navOpen = !navOpen">
+      <button class="xl:hidden ml-auto flex flex-col p-1 items-center" @click="navOpen = !navOpen">
         <template x-for="i in 3">
           <span class="w-6 h-1 bg-gray-700 mb-1"></span>
         </template>
       </button>
       <!-- end humberger button -->
       <!-- sidebar for small screen -->
-      <div class="fixed flex md:hidden z-40 h-full top-0 left-0 shadow-lg bg-white transition-all duration-300 ease"
+      <div class="fixed flex xl:hidden z-40 h-full top-0 left-0 shadow-lg bg-white transition-all duration-300 ease"
         x-show="navOpen" @click.away="navOpen = false" x-transition:enter-start="-left-72"
         x-transition:enter-end="left-0" x-transition:leave-start="left-0" x-transition:leave-end="-left-72">
         <div class="flex flex-row justify-around">
@@ -79,10 +83,28 @@
             <a href="/speaker.html"
               class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
               <span class="mx-4 text-lg font-normal">
-                INVITED SPEAKER
+                SPEAKER
               </span>
             </a>
-            <a href="/commitee.html"
+            <a href="/registration.html"
+              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+              <span class="mx-4 text-lg font-normal">
+                REGISTRATION
+              </span>
+            </a>
+            <a href="/publication.html"
+              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+              <span class="mx-4 text-lg font-normal">
+                PUBLICATIONS
+              </span>
+            </a>
+            <a href="/dates.html"
+              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+              <span class="mx-4 text-lg font-normal">
+                IMPORTANT DATES
+              </span>
+            </a>
+            <a href="/speaker.html"
               class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
               <span class="mx-4 text-lg font-normal">
                 COMMITEE
@@ -138,97 +160,6 @@
 
 
   <div class="max-w-screen-xl m-auto max-h-full">
-    <section id="timeline" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500"
-      class="text-gray-600 body-font py-20">
-      <div class="flex flex-col text-center w-full mb-20">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Important Dates</h1>
-      </div>
-      <div class="container mx-auto w-full">
-        <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2">
-          <!-- left -->
-          <div class="flex flex-row-reverse md:contents">
-            <div
-              class="bg-red-400 border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
-              <h3 class="font-semibold font-bold text-white text-xl mb-1">Deadline of Paper Submission</h3>
-              <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
-                June 1<sup>st</sup> - August 31<sup>st</sup> 2021
-              </p>
-            </div>
-            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
-              <div class="h-full w-6 flex items-center justify-center">
-                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
-              </div>
-              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
-            </div>
-          </div>
-          <!-- right -->
-          <div class="flex md:contents">
-            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
-              <div class="h-full w-6 flex items-center justify-center">
-                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
-              </div>
-              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
-            </div>
-            <div class="bg-white border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-              <h3 class="mb-3 font-bold text-gray-600 text-xl">Notification of Acceptance</h3>
-              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-                October 24<sup>th</sup>, 2021</p>
-              </p>
-            </div>
-          </div>
-          <!-- left -->
-          <div class="flex flex-row-reverse md:contents">
-            <div
-              class="bg-white border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
-              <h3 class="font-semibold font-bold text-gray-600 text-xl mb-1">Deadline for Camera
-                Ready/Final Version</h3>
-              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-                October 24<sup>th</sup>, 2021
-              </p>
-            </div>
-            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
-              <div class="h-full w-6 flex items-center justify-center">
-                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
-              </div>
-              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
-            </div>
-          </div>
-          <!-- right -->
-          <div class="flex md:contents">
-            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
-              <div class="h-full w-6 flex items-center justify-center">
-                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
-              </div>
-              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
-            </div>
-            <div class="bg-red-400 border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-              <h3 class="mb-3 font-bold text-white text-xl">Deadline for Slide and
-                Recording Submission</h3>
-              <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
-                November 1<sup>st</sup>, 2021</p>
-              </p>
-            </div>
-          </div>
-          <!-- left -->
-          <div class="flex flex-row-reverse md:contents">
-            <div
-              class="bg-white border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
-              <h3 class="font-semibold font-bold text-gray-600 text-xl mb-1">Conference Day</h3>
-              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-                November 13<sup>th</sup> - 14<sup>th</sup> 2021
-              </p>
-            </div>
-            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
-              <div class="h-full w-6 flex items-center justify-center">
-                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
-              </div>
-              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
 
     <section id="call-for-papers" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500"
       class="text-gray-600 body-font">

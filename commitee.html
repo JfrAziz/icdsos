@@ -37,20 +37,24 @@
       </a>
       <!-- end logo -->
       <!-- default navbar -->
-      <nav class="hidden md:flex md:ml-auto flex-wrap items-center text-base justify-center">
-        <a href="/speaker.html" class="mr-5 hover:text-gray-500">INVITED SPEAKER</a>
+      <nav class="hidden xl:flex xl:ml-auto flex-wrap items-center text-base justify-center">
+        <a href="/speaker.html" class="mr-5 hover:text-gray-500">SPEAKER</a>
+        <a href="/registration.html" class="mr-5 hover:text-gray-500">REGISTRATION</a>
+        <a href="/publication.html" class="mr-5 hover:text-gray-500">PUBLICATIONS</a>
+        <a href="/dates.html" class="mr-5 hover:text-gray-500">IMPORTANT DATES</a>
+        <a href="/program.html" class="mr-5 hover:text-gray-500">PROGRAM</a>
         <a href="/commitee.html" class="mr-5 hover:text-gray-500">COMMITEE</a>
       </nav>
       <!-- end default navbar -->
       <!-- humberger button -->
-      <button class="md:hidden ml-auto flex flex-col p-1 items-center" @click="navOpen = !navOpen">
+      <button class="xl:hidden ml-auto flex flex-col p-1 items-center" @click="navOpen = !navOpen">
         <template x-for="i in 3">
           <span class="w-6 h-1 bg-gray-700 mb-1"></span>
         </template>
       </button>
       <!-- end humberger button -->
       <!-- sidebar for small screen -->
-      <div class="fixed flex md:hidden z-40 h-full top-0 left-0 shadow-lg bg-white transition-all duration-300 ease"
+      <div class="fixed flex xl:hidden z-40 h-full top-0 left-0 shadow-lg bg-white transition-all duration-300 ease"
         x-show="navOpen" @click.away="navOpen = false" x-transition:enter-start="-left-72"
         x-transition:enter-end="left-0" x-transition:leave-start="left-0" x-transition:leave-end="-left-72">
         <div class="flex flex-row justify-around">
@@ -58,10 +62,28 @@
             <a href="/speaker.html"
               class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
               <span class="mx-4 text-lg font-normal">
-                INVITED SPEAKER
+                SPEAKER
               </span>
             </a>
-            <a href="/commitee.html"
+            <a href="/registration.html"
+              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+              <span class="mx-4 text-lg font-normal">
+                REGISTRATION
+              </span>
+            </a>
+            <a href="/publication.html"
+              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+              <span class="mx-4 text-lg font-normal">
+                PUBLICATIONS
+              </span>
+            </a>
+            <a href="/dates.html"
+              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+              <span class="mx-4 text-lg font-normal">
+                IMPORTANT DATES
+              </span>
+            </a>
+            <a href="/speaker.html"
               class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
               <span class="mx-4 text-lg font-normal">
                 COMMITEE
@@ -78,19 +100,10 @@
 
     <section class="text-gray-600 body-font" x-data="commiteeData">
       <div class="container px-5 py-24 mx-auto">
-        <!-- <div class="flex flex-col text-center w-full mb-20" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-          <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">COMMITTEES</h1>
-          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem, ipsum dolor sit amet consectetur adipisicing
-            elit. Dolorum vero recusandae omnis iste sequi perferendis aut reiciendis obcaecati excepturi ipsa
-            temporibus molestias placeat nulla, fugiat assumenda. Voluptatum dolorum dolores cupiditate!</p>
-        </div> -->
 
         <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
           <div class="flex flex-col text-center w-full mb-10">
-            <h3 class="text-2xl font-medium title-font mb-4 text-gray-900">COMMITTEES</h3>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Dolorum vero recusandae omnis iste sequi perferendis aut reiciendis obcaecati excepturi ipsa
-              temporibus molestias placeat nulla, fugiat assumenda. Voluptatum dolorum dolores cupiditate!</p>
+            <h3 class="text-2xl font-medium title-font mb-4 text-gray-900">ORGANIZING COMMITTEES</h3>
           </div>
           <div class="flex flex-wrap -m-2">
             <template x-for="i in commitee">
@@ -227,131 +240,8 @@
     AOS.init();
     const headerData = { onTop: false, navOpen: false }
     const isOnTop = () => document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80
-    const commiteeData = {
-      commitee: [
-        {
-          name: "Dr. Erni Tri Astuti, M. Math",
-          position : "Director"
-        },
-        {
-          name: "Dr. Hardius Usman, S.Si., M.Si",
-          position : "Advisor"
-        },
-        {
-          name: "Titik Harsanti, M.Si",
-          position : "Advisor"
-        },
-        {
-          name: "Ir. Agus Purwoto, M.Si",
-          position : "Advisor"
-        },
-        {
-          name: "Dr. Nasrudin, S.Si., ME",
-          position : "Person in Charge"
-        },
-        {
-          name: "Dr. Eng. Arie Wahyu Wijayanto, SST., M.T",
-          position : "Chairman"
-        },
-        {
-          name: "Dr. Rindang Bangun Prasetyo, SST., M.Si",
-          position : "Administrative Coordinator"
-        },
-        {
-          name: "Aisyah Fitri Yuniasih, SST., SE., M.Si",
-          position : "Secretariat"
-        },
-        {
-          name: "Claudya Muna Asmarani, S.Tr.Stat",
-          position : "Secretariat"
-        },
-        {
-          name: "Luci Wulansari, S.Si, M.SE",
-          position : "Treasurer"
-        },
-        {
-          name: "Tria Merina, SST",
-          position : "Treasurer"
-        },
-        {
-          name: "Ika Yuni Wulansari, S.ST., M.Stat",
-          position : "Event Section"
-        },
-        {
-          name: "Nucke Widowati Kusumo P., S.Si., M.Sc., Ph.D",
-          position : "Event Section"
-        },
-        {
-          name: "Lia Yuliana, S.Si, M.T",
-          position : "Event Section"
-        },
-        {
-          name: "Yuliagnis Transver Wijaya, SST., M.Sc",
-          position : "Event Section"
-        },
-        {
-          name: "Ibnu Santoso, SST., M.T",
-          position : "IT and Communication Section"
-        },
-        {
-          name: "Takdir, SST.,M.T",
-          position : "IT and Communication Section"
-        },
-        {
-          name: "Geri Yesa Ermawan, S.Tr.Stat",
-          position : "IT and Communication Section"
-        },
-        {
-          name: "Rahadi Jalu Yoga Utama, S.Tr.Stat",
-          position : "IT and Communication Section"
-        },
-        {
-          name: "Muhammad Luqman, S.Tr.Stat",
-          position : "IT and Communication Section"
-        },
-        {
-          name: "Isfan Nur Fauzi, S.Tr.Stat",
-          position : "IT and Communication Section"
-        },
-        {
-          name: "Nori Wilantika, SST., M.T.I",
-          position : "Proceedings and Publications Section"
-        },
-        {
-          name: "Febri Wicaksono, SST., M.Si",
-          position : "Proceedings and Publications Section"
-        },
-        {
-          name: "Dr. Rita Yuliana, S.Si., M.SE",
-          position : "Proceedings and Publications Section"
-        },
-        {
-          name: "Lutfi Rahmatuti Maghfiroh, SST., M.T",
-          position : "Manuscript Management Section"
-        },
-        {
-          name: "Dr. Tiodora Hadumaon Siagian, M.Pop.Hum.Res",
-          position : "Manuscript Management Section"
-        },
-        {
-          name: "Yunarso Anang Sulistiadi, Ph.D",
-          position : "Manuscript Management Section"
-        },
-        {
-          name: "Dr. Azka Ubaidillah",
-          position : "Manuscript Management Section"
-        },
-        {
-          name: "Siskarossa Ika Oktora, SST., M.Stat",
-          position : "Public Relations and Documentation Section"
-        },
-        {
-          name: "Nofita Istiana, SST., M.Stat",
-          position : "Public Relations and Documentation Section"
-        },
-      ]
-    }
   </script>
+  <script src="src/commitee.js"></script>
 </body>
 
 </html>

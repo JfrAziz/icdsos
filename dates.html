@@ -97,30 +97,93 @@
   </header>
 
   <div class="max-w-screen-xl m-auto max-h-full">
-
-    <section class="text-gray-600 body-font" x-data>
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-20">
-          <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">INVITED SPEAKER</h1>
-        </div>
-        <div class="flex flex-wrap -m-4 justify-center">
-          <template x-for="i in 10">
-            <div class="w-sm lg:w-1/3 md:w-1/2 p-5">
-              <div class="rounded-sm overflow-hidden shadow-lg">
-                <div class="bg-cover hover:bg-gray">
-                  <img alt="content" class="object-cover object-center h-full w-full"
-                    src="https://dummyimage.com/500x500">
-                </div>
-                <div class="mx-6 my-4">
-                  <div class="font-medium text-base text-gray-darker mb-4">Item name goes here</div>
-                  <p class="font-normal text-gray-dark text-sm mb-2">
-                    Lorem ipsum dolor sit amet, consectetur
-                  </p>
-                </div>
-              </div>
+    <section id="timeline" data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="500"
+      class="text-gray-600 body-font py-20">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Important Dates</h1>
+      </div>
+      <div class="container mx-auto w-full">
+        <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2">
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div
+              class="bg-red-400 border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
+              <h3 class="font-semibold font-bold text-white text-xl mb-1">Deadline of Paper Submission</h3>
+              <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
+                June 1<sup>st</sup> - August 31<sup>st</sup> 2021
+              </p>
             </div>
-
-          </template>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="flex md:contents">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
+            </div>
+            <div class="bg-white border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 class="mb-3 font-bold text-gray-600 text-xl">Notification of Acceptance</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                October 24<sup>th</sup>, 2021</p>
+              </p>
+            </div>
+          </div>
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div
+              class="bg-white border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
+              <h3 class="font-semibold font-bold text-gray-600 text-xl mb-1">Deadline for Camera
+                Ready/Final Version</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                October 24<sup>th</sup>, 2021
+              </p>
+            </div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="flex md:contents">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
+            </div>
+            <div class="bg-red-400 border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 class="mb-3 font-bold text-white text-xl">Deadline for Slide and
+                Recording Submission</h3>
+              <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
+                November 1<sup>st</sup>, 2021</p>
+              </p>
+            </div>
+          </div>
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div
+              class="bg-white border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
+              <h3 class="font-semibold font-bold text-gray-600 text-xl mb-1">Conference Day</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                November 13<sup>th</sup> - 14<sup>th</sup> 2021
+              </p>
+            </div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-400 shadow"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -234,6 +297,7 @@
       </div>
     </footer>
   </div>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init();
