@@ -98,6 +98,29 @@
   
   <div class="max-w-screen-xl m-auto max-h-full">
 
+    <section class="text-gray-600 body-font" x-data="data">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">PUBLICATIONS</h1>
+        </div>
+        <div class="flex flex-wrap -m-4 justify-center">
+          <template x-for="i in publication">
+            <div class="w-sm lg:w-1/3 md:w-1/2 p-5">
+              <div class="rounded-sm overflow-hidden shadow-lg">
+                <div class="bg-cover hover:bg-gray">
+                  <img alt="content" class="object-cover object-center p-5 w-full" x-bind:src="i.img">
+                </div>
+                <div class="mx-6 my-4">
+                  <div class="font-medium text-base text-gray-darker mb-4" x-text="i.name"></div>
+                </div>
+              </div>
+            </div>
+
+          </template>
+        </div>
+      </div>
+    </section>
+
     <section id="contact-us" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500"
       class="text-gray-600 body-font mt-20">
       <div class="container px-5 pb-20 mx-auto">
@@ -213,6 +236,18 @@
     AOS.init();
     const headerData = { onTop: false, navOpen: false }
     const isOnTop = () => document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80
+    const data = {
+      publication : [
+        {
+          "name" : "IEEE : Institute of Electrical and Electronics Engineers",
+          "img" : "/src/IEEE.png"
+        },
+        {
+          "name" : "IOP",
+          "img" : "/src/IOP.jpg"
+        }
+      ]
+    }
   </script>
 </body>
 
