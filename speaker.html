@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="shortcut icon" href="src/img/logo-white-small.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="src/css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap"
@@ -14,8 +15,8 @@
   <title>ICDSOS : International Conference on Data Science and Official Statistics</title>
   <meta name="description"
     content="ICDSOS : Strengthening The Contribution of Data Science and Official Statistics To The Society in The Disruption Era">
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 
 <body>
@@ -38,7 +39,8 @@
       </nav>
       <!-- end default navbar -->
       <!-- humberger button -->
-      <button class="xl:hidden ml-auto flex flex-col bg-transparent hover:bg-gray-100 p-1 items-center" @click="navOpen = !navOpen">
+      <button class="xl:hidden ml-auto flex flex-col bg-transparent hover:bg-gray-100 p-1 items-center"
+        @click="navOpen = !navOpen">
         <template x-for="i in 3">
           <span class="w-6 h-1 bg-gray-700 mb-1"></span>
         </template>
@@ -93,13 +95,13 @@
 
   <div class="max-w-screen-xl m-auto max-h-full">
 
-    <section class="text-gray-600 body-font" x-data>
+    <section class="text-gray-600 body-font" x-data="speakerData">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-20">
-          <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">INVITED SPEAKER</h1>
+        <div class="flex flex-col text-center w-full mb-10 my-10">
+          <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">SPEAKER</h1>
         </div>
         <div class="flex flex-wrap -m-4 justify-center">
-          <template x-for="i in 5">
+          <template x-for="i in speaker">
             <div class="w-sm lg:w-1/3 md:w-1/2 p-5">
               <div class="rounded-sm overflow-hidden shadow-lg">
                 <div class="bg-cover hover:bg-gray">
@@ -107,10 +109,8 @@
                     src="https://dummyimage.com/500x500">
                 </div>
                 <div class="mx-6 my-4">
-                  <div class="font-medium text-base text-gray-darker mb-4">Item name goes here</div>
-                  <p class="font-normal text-gray-dark text-sm mb-2">
-                    Lorem ipsum dolor sit amet, consectetur
-                  </p>
+                  <div class="font-medium text-base text-gray-darker mb-4" x-text="i.name"></div>
+                  <p class="font-normal text-gray-dark text-sm mb-2" x-text="i.description"></p>
                 </div>
               </div>
             </div>
@@ -228,6 +228,7 @@
   <script>
     AOS.init();
   </script>
+  <script src="src/js/speaker.js"></script>
 </body>
 
 </html>
