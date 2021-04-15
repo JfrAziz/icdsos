@@ -39,7 +39,8 @@
       </nav>
       <!-- end default navbar -->
       <!-- humberger button -->
-      <button class="xl:hidden ml-auto flex flex-col bg-transparent hover:bg-gray-100 p-1 items-center" @click="navOpen = !navOpen">
+      <button class="xl:hidden ml-auto flex flex-col bg-transparent hover:bg-gray-100 p-1 items-center"
+        @click="navOpen = !navOpen">
         <template x-for="i in 3">
           <span class="w-6 h-1 bg-gray-700 mb-1"></span>
         </template>
@@ -96,27 +97,38 @@
 
     <section class="text-gray-600 body-font" x-data="commiteeData">
       <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-10">
+          <span>The Conference is organized by Politeknik Statistika STIS and Statistics Indonesia (BPS)</span>
+        </div>
 
-        <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-          <div class="flex flex-col text-center w-full mb-10">
-            <h3 class="text-2xl font-medium title-font mb-4 text-gray-900">ORGANIZING COMMITTEES</h3>
-          </div>
-          <div class="flex flex-wrap -m-2">
-            <template x-for="i in commitee">
-              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                  <img alt="team"
-                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                    src="https://dummyimage.com/80x80">
-                  <div class="flex-grow">
-                    <h2 class="text-gray-900 title-font font-medium" x-text="i.name"></h2>
-                    <p class="text-gray-500" x-text="i.position"></p>
+        <template x-for="i in commitees">
+          <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+            <div class="flex flex-col text-center w-full mb-10">
+              <h3 class="text-2xl font-medium title-font mb-4 text-gray-900" x-text="i.commitee"></h3>
+            </div>
+            <div class="flex flex-wrap -m-2 mb-10">
+              <template x-for="m in i.member">
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                    <div class="p-5 bg-gray-100 flex-shrink-0 rounded-full mr-4 d-flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-user">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </div>
+
+                    <div class="flex-grow">
+                      <h2 class="text-gray-900 title-font font-medium" x-text="m.name"></h2>
+                      <p class="text-gray-500" x-text="m.description"></p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </template>
+              </template>
+            </div>
           </div>
-        </div>
+        </template>
 
       </div>
     </section>
