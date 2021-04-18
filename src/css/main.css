@@ -1,10 +1,14 @@
+body {
+  background-color: #FDD280;
+}
+
 header.scroll {
   background-color: #fff !important;
   box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 
 #main {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7)), url('/src/img/polstat.jpg');
+  background-image: linear-gradient(hsla(209, 81%, 10%, 0.75), hsla(209, 81%, 10%, 0.75)), url('/src/img/polstat.jpg');
 }
 
 #main h1 {
