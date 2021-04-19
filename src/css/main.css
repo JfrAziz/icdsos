@@ -11,8 +11,11 @@ header.scroll {
   background-image: linear-gradient(hsla(209, 81%, 10%, 0.75), hsla(209, 81%, 10%, 0.75)), url('/src/img/polstat.jpg');
 }
 
-#main h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
+}
+
+#main h1 {
   font-weight: bold;
   color: white;
 }
