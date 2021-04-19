@@ -7,13 +7,14 @@ header.scroll {
   box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
 #main {
   background-image: linear-gradient(hsla(209, 81%, 10%, 0.75), hsla(209, 81%, 10%, 0.75)), url('/src/img/polstat.jpg');
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
-}
 
 #main h1 {
   font-weight: bold;
@@ -24,4 +25,43 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   color: white;
+}
+
+#hero-btn {
+  background: #FEC14E;
+  color: #0D467D;
+  transition: all .15s ease
+}
+
+.register-btn {
+  background-color: #0AA8B4;
+  transition: all .15s ease;
+}
+
+.register-btn:hover {
+  background-color: #087e86;
+}
+
+#hero-btn:hover {
+  background: #f1c572;
+}
+
+#call-for-papers {
+  background-color: #FAC347;
+}
+
+#fee-register {
+  background: linear-gradient(180deg, #E76E27 0%, #FEC14E 100%);
+}
+
+#contact-us {
+  background-color: #0AA8B4;
+}
+
+footer {
+  background-color: #088791;
+}
+
+#speaker, #comitee, #journal, #program, #timeline {
+  background: linear-gradient(180deg, #FDD280 0%, #FEC14E 100%);
 }

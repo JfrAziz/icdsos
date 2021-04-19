@@ -74,12 +74,20 @@ const commiteeData = {
           description : "Imperial College London, UK"
         },
         {
+          name: "Prof. Vassilis Gerogiannis",
+          description : "University of Thessaly, Greece"
+        },
+        {
           name: "Dr. Fadhilla Zennifa",
           description : "Kyushu University, Japan"
         },
         {
           name: "Dr. Yoshimichi Watanabe",
           description : "University of Yamanashi, Japan"
+        },
+        {
+          name: "Rezzy Eko Caraka, Ph.D.",
+          description : "Seoul National University, South Korea"
         },
         {
           name: "Assoc. Prof. Le Hoang Son",
@@ -98,12 +106,36 @@ const commiteeData = {
           description : " Politeknik Statistika STIS, Indonesia"
         },
         {
-          name: "Setia Pramana, Ph.D",
+          name: "Setia Pramana, Ph.D.",
           description : "Statistics Indonesia (BPS), Indonesia"
+        },
+        {
+          name: "Dr. Meindra Sabri",
+          description : "Statistics Indonesia (BPS), Indonesia"
+        },
+        {
+          name: "Dr. Nusar Hajarisman",
+          description : "Universitas Islam Bandung, Indonesia"
         },
         {
           name: "Dr. Ayu Purwarianti",
           description : "Institut Teknologi Bandung, Indonesia"
+        },
+        {
+          name: "Dr. Anindya Apriliyanti Pravitasari",
+          description : "Universitas Padjadjaran, Indonesia"
+        },
+        {
+          name: "Dr. Yusep Suparman",
+          description : "Universitas Padjadjaran, Indonesia"
+        },
+        {
+          name: "Dr. Toni Toharudin",
+          description : "Universitas Padjadjaran, Indonesia"
+        },
+        {
+          name: "Dr. Anang Kurnia",
+          description : "IPB University, Indonesia"
         },
         {
           name: "Dr. Achmad Syahrul Choir",
@@ -132,15 +164,7 @@ const commiteeData = {
         {
           name: "Novia Budi Parwanto, Ph.D",
           description : "Politeknik Statistika STIS, Indonesia"
-        },
-        {
-          name: "Dr. Timbang Sirait",
-          description : "Politeknik Statistika STIS, Indonesia"
-        },
-        {
-          name: "Dr. Budiasih",
-          description : "Politeknik Statistika STIS, Indonesia"
-        },
+        }
       ]
     }
   ]
