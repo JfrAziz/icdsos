@@ -21,7 +21,7 @@ const commiteeData = {
         },
         {
           name: "Dr. Nasrudin, S.Si., ME",
-          description : "Person in Charge"
+          description : "Technical Advisor"
         },
       ]
     },

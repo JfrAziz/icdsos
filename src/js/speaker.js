@@ -15,11 +15,13 @@ const speakerData = {
       name: "Prof. Budi Nurani Ruchjana",
       type: "Invited Speaker:",
       description: "Universitas Padjajaran, Indonesia",
+      photo : "src/img/speaker/budi-nurani-ruchjana.jpeg"
     },
     {
       name: "Prof. Jean-Bernard Chatelain",
       type: "Invited Speaker:",
       description: "University Paris 1 Pantheon Sorbonne, France",
+      photo : "src/img/speaker/jean-bernard-chatelain .jpeg"
     },
     {
       name: "Dr. Alexander Kowarik",
@@ -31,6 +33,7 @@ const speakerData = {
       name: "Assoc. Prof. Woojoo Lee, Ph.D",
       type: "Invited Speaker:",
       description: "Seoul National University, South Korea",
+      photo : "src/img/speaker/woojoo-lee.jpeg"
     },
   ]
 }
