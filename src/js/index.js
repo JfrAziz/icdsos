@@ -1,6 +1,18 @@
 const topicsData = {
   topics: [
     {
+      topic: "Data Science",
+      subtopics: [
+        { subtopic: "Machine Learning and Deep Learning" },
+        { subtopic: "Data Science and Artificial Intelligence (AI)" },
+        { subtopic: "Data Mining and Big Data" },
+        { subtopic: "Statistical Software" },
+        { subtopic: "Information System Development for Official Statistics" },
+        { subtopic: "Remote Sensing to Strengthen Official Statistics" },
+        { subtopic: "Other data science relevant topic" },
+      ],
+    },
+    {
       topic: "Applied Statistics",
       subtopics: [
         { subtopic: "Applied Multivariate Analysis" },
@@ -29,18 +41,6 @@ const topicsData = {
         { subtopic: "Sampling Error and Non Sampling Error Evaluation" },
         { subtopic: "Benchmarking Regional Official Statistics" },
         { subtopic: "Other official statistics relevant topic" }
-      ],
-    },
-    {
-      topic: "Data Science",
-      subtopics: [
-        { subtopic: "Machine Learning and Deep Learning" },
-        { subtopic: "Data Science and Artificial Intelligence (AI)" },
-        { subtopic: "Data Mining and Big Data" },
-        { subtopic: "Statistical Software" },
-        { subtopic: "Information System Development for Official Statistics" },
-        { subtopic: "Remote Sensing to Strengthen Official Statistics" },
-        { subtopic: "Other data science relevant topic" },
       ],
     },
   ],

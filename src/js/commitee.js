@@ -158,10 +158,6 @@ const commiteeData = {
           description : "Politeknik Statistika STIS, Indonesia"
         },
         {
-          name: "Dr. Nasrudin",
-          description : "Politeknik Statistika STIS, Indonesia"
-        },
-        {
           name: "Novia Budi Parwanto, Ph.D",
           description : "Politeknik Statistika STIS, Indonesia"
         }
