@@ -26,7 +26,7 @@ const commiteeData = {
       ]
     },
     {
-      commitee: "Organizing Committee",
+      commitee: "Coordinators of Organizing Committee",
       member: [
         {
           name: "Dr. Eng. Arie Wahyu Wijayanto, SST., M.T",

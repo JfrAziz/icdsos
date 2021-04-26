@@ -15,11 +15,6 @@
   <meta name="description"
     content="ICDSOS : Strengthening The Contribution of Data Science and Official Statistics To The Society in The Disruption Era">
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
-  <style>
-    header:not(.scroll) {
-      color: white;
-    }
-  </style>
 </head>
 
 <body>
@@ -34,12 +29,13 @@
       <!-- end logo -->
       <!-- default navbar -->
       <nav class="hidden xl:flex xl:ml-auto flex-wrap items-center text-base justify-center">
-        <a href="/speaker.html" class="mr-5 hover:text-gray-500">SPEAKER</a>
-        <!-- <a href="/registration.html" class="mr-5 hover:text-gray-500">REGISTRATION</a> -->
-        <a href="/publication.html" class="mr-5 hover:text-gray-500">PUBLICATIONS</a>
-        <a href="/dates.html" class="mr-5 hover:text-gray-500">IMPORTANT DATES</a>
-        <a href="/program.html" class="mr-5 hover:text-gray-500">PROGRAM</a>
-        <a href="/commitee.html" class="mr-5 hover:text-gray-500">COMMITEE</a>
+        <a href="/index.html" class="mr-5 hover:text-gray-300">HOME</a>
+        <a href="/speaker.html" class="mr-5 hover:text-gray-300">SPEAKER</a>
+        <a href="/registration.html" class="mr-5 hover:text-gray-300">REGISTRATION</a>
+        <a href="/publication.html" class="mr-5 hover:text-gray-300">PUBLICATIONS</a>
+        <a href="/dates.html" class="mr-5 hover:text-gray-300">IMPORTANT DATES</a>
+        <a href="/program.html" class="mr-5 hover:text-gray-300">PROGRAM</a>
+        <a href="/commitee.html" class="hover:text-gray-300">COMMITEE</a>
       </nav>
       <!-- end default navbar -->
       <!-- humberger button -->
@@ -56,18 +52,24 @@
         x-transition:enter-end="left-0" x-transition:leave-start="left-0" x-transition:leave-end="-left-72">
         <div class="flex flex-row justify-around">
           <nav class="w-72 h-screen mt-10 px-3 ">
+            <a href="/index.html"
+              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+              <span class="mx-4 text-lg font-normal">
+                HOME
+              </span>
+            </a>
             <a href="/speaker.html"
               class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
               <span class="mx-4 text-lg font-normal">
                 SPEAKER
               </span>
             </a>
-            <!-- <a href="/registration.html"
+            <a href="/registration.html"
               class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
               <span class="mx-4 text-lg font-normal">
                 REGISTRATION
               </span>
-            </a> -->
+            </a>
             <a href="/publication.html"
               class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
               <span class="mx-4 text-lg font-normal">
@@ -129,7 +131,7 @@
               International Conference on Data Science and Official Statistics (ICDSOS) 2021 is organized by
               Politeknik Statistika STIS and Statistics Indonesia (BPS). This international conference in collaboration
               with
-              FORSTAT (Forum Pendidikan Tinggi Statistika) and ISI (Ikatan Statistisi Indonesia). The ICDSOS will bring
+              Forum Pendidikan Tinggi Statistika (FORSTAT) and Ikatan Statistisi Indonesia (ISI). The ICDSOS will bring
               together statisticians and data scientists from academia, official statistics, health sector and business,
               junior and senior professionals, in an inviting virtual (online) environment on November 13<sup>th</sup> -
               14<sup>th</sup>, 2021 in regard to the COVID-19 outbreak. Dealing with the theme of this conference is
@@ -234,7 +236,7 @@
         </div>
       </div>
     </section>
-  
+
     <section id="register" class="text-white body-font">
       <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col  max-w-screen-xl">
         <div class="text-center lg:w-2/3 w-full">
@@ -244,10 +246,12 @@
             are welcome to join us virtually for the ICDSOS.
           </p>
           <div class="flex justify-center">
-            <button class="register-btn inline-flex text-white border-0 uppercase shadow-md py-2 px-6 focus:outline-none rounded text-lg">
+            <button
+              class="register-btn inline-flex text-white border-0 uppercase shadow-md py-2 px-6 focus:outline-none rounded text-lg">
               Presenter Registration
             </button>
-            <button class="register-btn ml-4 inline-flex text-white border-0 uppercase shadow-md py-2 px-6 focus:outline-none rounded text-lg">
+            <button
+              class="register-btn ml-4 inline-flex text-white border-0 uppercase shadow-md py-2 px-6 focus:outline-none rounded text-lg">
               Participant Registration
             </button>
           </div>
@@ -281,17 +285,32 @@
         <div>
           <h3 class="font-medium text-lg title-font mb-8">SUPPORTED BY</h3>
           <div class="grid grid-cols-4 gap-5">
-            <a href="https://stis.ac.id" class="rounded-lg shadow-lg border border-gray-300 bg-white p-2 flex items-center justify-center">
+            <a href="https://stis.ac.id"
+              class="institution rounded-lg shadow-lg border border-gray-300 bg-white p-2 flex items-center justify-center relative">
               <img src="src/img/stis.png" alt="" srcset="">
+              <span
+                class="tooltip hidden bg-gray-700 py-1 px-2 text-center rounded-lg shadow-md absolute -bottom-10 whitespace-nowrap">Politeknik
+                Statistika STIS</span>
             </a>
-            <a href="https://bps.go.id" class="rounded-lg shadow-lg border border-gray-300 bg-white p-2 flex items-center justify-center">
+            <a href="https://bps.go.id"
+              class="institution rounded-lg shadow-lg border border-gray-300 bg-white p-2 flex items-center justify-center relative">
               <img src="src/img/bps.png" alt="" srcset="">
+              <span
+                class="tooltip hidden bg-gray-700 py-1 px-2 text-center rounded-lg shadow-md absolute -bottom-10 whitespace-nowrap">Statistics
+                Indonesia (BPS)</span>
             </a>
-            <a href="https://forstat.org/" class="rounded-lg shadow-lg border border-gray-300 bg-white p-2 flex items-center justify-center">
+            <a href="https://forstat.org/"
+              class="institution rounded-lg shadow-lg border border-gray-300 bg-white p-2 flex items-center justify-center relative">
               <img src="src/img/forstat.png" alt="" srcset="">
+              <span
+                class="tooltip hidden bg-gray-700 py-1 px-2 text-center rounded-lg shadow-md absolute -bottom-10 whitespace-nowrap">FORSTAT</span>
             </a>
-            <a href="http://www.isi-indonesia.org/" class="rounded-lg shadow-lg border border-gray-300 bg-white p-2 flex items-center justify-center">
+            <a href="http://www.isi-indonesia.org/"
+              class="institution rounded-lg shadow-lg border border-gray-300 bg-white p-2 flex items-center justify-center relative">
               <img src="src/img/isi.png" alt="" srcset="">
+              <span
+                class="tooltip hidden bg-gray-700 py-1 px-2 text-center rounded-lg shadow-md absolute -bottom-10 whitespace-nowrap">Ikatan
+                Statistisi Indonesia (ISI)</span>
             </a>
           </div>
         </div>

@@ -7,6 +7,14 @@ header.scroll {
   box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 
+header.scroll nav a:hover{
+  color: hsl(0, 0%, 66%);
+}
+
+header:not(.scroll) {
+  color: white;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
 }
@@ -63,5 +71,9 @@ footer {
 }
 
 #speaker, #comitee, #journal, #program, #timeline {
-  background: linear-gradient(180deg, #FDD280 0%, #FEC14E 100%);
+  background: linear-gradient(180deg, #E76E27 0%, #FEC14E 100%);
+}
+
+.institution:hover .tooltip {
+  display: block;
 }
