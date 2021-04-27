@@ -35,5 +35,11 @@ const speakerData = {
       description: "Seoul National University, South Korea",
       photo : "src/img/speaker/woojoo-lee.jpeg"
     },
+    {
+      name: "Dr. Walter J. Radermacher",
+      type: "Invited Speaker:",
+      description: "President of FENSTATS and Former Director General of Eurostat",
+      photo : "src/img/speaker/walter-j-radermacher.jpeg"
+    },
   ]
 }

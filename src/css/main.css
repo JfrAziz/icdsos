@@ -58,7 +58,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #FAC347;
 }
 
-#fee-register {
+#fee-register, 
+#speaker, #comitee, #journal, #program, #timeline {
   background: linear-gradient(180deg, #E76E27 0%, #FEC14E 100%);
 }
 
@@ -68,10 +69,6 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
   background-color: #088791;
-}
-
-#speaker, #comitee, #journal, #program, #timeline {
-  background: linear-gradient(180deg, #E76E27 0%, #FEC14E 100%);
 }
 
 .institution:hover .tooltip {
