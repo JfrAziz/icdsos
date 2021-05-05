@@ -134,6 +134,14 @@ const commiteeData = {
           description : "Universitas Padjadjaran, Indonesia"
         },
         {
+          name: "Dr. Irlandia Ginanjar",
+          description : "Universitas Padjadjaran, Indonesia"
+        },
+        {
+          name: "Dr. Yudhie Andriyana",
+          description : "Universitas Padjadjaran, Indonesia"
+        },
+        {
           name: "Dr. Anang Kurnia",
           description : "IPB University, Indonesia"
         },

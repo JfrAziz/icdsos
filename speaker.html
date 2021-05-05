@@ -103,29 +103,29 @@
 
   <section id="speaker" class="text-gray-600 body-font" x-data="speakerData">
     <div class="container px-5 pt-36 pb-16 max-w-screen-xl mx-auto">
-      <div class="flex flex-col text-center w-full mb-10">
-        <h1 class="title-font sm:text-4xl text-3xl mb-5 font-bold text-white">SPEAKERS</h1>
+      <div class="flex flex-col text-center w-full mb-2">
+        <h1 class="title-font sm:text-4xl text-3xl mb-0 font-bold text-white">SPEAKERS</h1>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <template x-for="i in speaker">
-          <div class="rounded-lg overflow-hidden shadow-lg bg-white w-3/4 sm:w-auto m-auto sm:m-0">
-            <div class="bg-cover hover:bg-gray">
-              <template x-if="i.photo">
-                <img alt="content" class="object-cover object-center h-96 w-full" x-bind:src="i.photo"
-                  src="https://dummyimage.com/500x500">
-              </template>
-              <template x-if="!i.photo">
-                <img alt="content" class="object-cover object-center h-96  w-full"
-                  src="https://dummyimage.com/500x500">
-              </template>
-            </div>
-            <div class="mx-6 my-4">
-              <div class="font-medium text-base text-gray-darker mb-4" x-text="i.name"></div>
-              <p class="font-normal text-gray-dark text-sm mb-2" x-text="i.description"></p>
-            </div>
+      <template x-for="i in speakers">
+        <div>
+          <div class="flex flex-col text-center w-full mb-10">
+            <h4 class="title-font sm:text-3xl text-2xl mt-20 mb-5 font-bold text-white uppercase" x-text="i.type"></h4>
           </div>
-        </template>
-      </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <template x-for="s in i.name">
+              <div class="rounded-lg overflow-hidden shadow-lg bg-white w-3/4 sm:w-auto m-auto sm:m-0">
+                <div class="bg-cover hover:bg-gray">
+                  <img alt="content" class="object-cover object-center h-72 w-full" x-bind:src="s.photo">
+                </div>
+                <div class="mx-6 my-4">
+                  <div class="font-medium text-base text-gray-darker mb-4" x-text="s.name"></div>
+                  <p class="font-normal text-gray-dark text-sm mb-2" x-text="s.description"></p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </template>
     </div>
   </section>
 
