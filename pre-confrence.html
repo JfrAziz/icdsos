@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="src/css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap"
     rel="stylesheet">
-  <title>ICDSOS : International Conference on Data Science and Official Statistics</title>
+  <title>Pre Conference - ICDSOS : International Conference on Data Science and Official Statistics</title>
   <meta name="description"
     content="ICDSOS : Strengthening The Contribution of Data Science and Official Statistics To The Society in The Disruption Era">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -114,42 +114,77 @@
     const isScrolling = () => document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80
   </script>
 
-  <section id="comitee" class="text-gray-600 body-font" x-data="commiteeData">
-    <div class="container px-5 pt-24 pb-12 mx-auto max-w-screen-xl">
-      <div class="flex flex-col text-center w-full mb-10 text-white">
-        <span>The Conference is organized by Politeknik Statistika STIS and Statistics Indonesia (BPS)</span>
+  <section id="pre-confrence" class="text-gray-600 body-font" x-data="data">
+    <div class="container px-5 pt-36 pb-16 mx-auto max-w-screen-xl">
+      <div class="flex flex-col text-center w-full mb-10">
+        <h1 class="title-font sm:text-4xl text-3xl mb-5 font-bold text-white">PRE CONFERENCE</h1>
       </div>
-
-      <template x-for="i in commitees">
-        <div>
-          <div class="flex flex-col text-center w-full mb-10">
-            <h3 class="title-font sm:text-4xl text-3xl my-5 font-bold text-white uppercase" x-text="i.commitee"></h3>
-          </div>
-          <div class="flex flex-wrap -m-2 mb-10">
-            <template x-for="m in i.member">
-              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg bg-white shadow-md">
-                  <div class="p-5 bg-gray-100 flex-shrink-0 rounded-full mr-4 d-flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="feather feather-user">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                  </div>
-                  <div class="flex-grow">
-                    <h2 class="text-gray-900 title-font font-medium" x-text="m.name"></h2>
-                    <p class="text-gray-500" x-text="m.description"></p>
-                  </div>
-                </div>
+      <div class="flex flex-wrap -m-4 justify-center">
+        <template x-for="i in pre_conference">
+          <div class="w-1/3 bg-white shadow-lg m-4 rounded-sm ">
+            <div class="overflow-hidden">
+              <div class="bg-cover hover:bg-gray">
+                <img alt="content" class="object-cover object-center h-96 w-full" x-bind:src="i.img">
               </div>
-            </template>
+              <div class="mx-6 my-4">
+                <div class="font-medium text-base text-gray-darker mb-4 text-center" x-text="i.name"></div>
+              </div>
+              <div class="mx-6">
+                <div class="font-light text-base text-gray-darker mb-4 text-center" x-text="i.univ"></div>
+              </div>
+              <div class="mx-6">
+                <div class="font-light text-base text-gray-darker mb-4 text-center" x-text="i.description"></div>
+              </div>
+            </div>
           </div>
-        </div>
-      </template>
-
+        </template>
+      </div>
     </div>
   </section>
+
+  <div class="divider">
+    <svg width="100%" height="200" viewBox="0 0 1920 295" fill="none" xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio=none>
+      <path
+        d="M0 27.8831L29.2 35.661C58.3 43.5857 116.7 59.1416 174.8 60.1688C233 61.1961 291 47.4013 349.2 43.5857C407.3 39.6234 465.7 45.4935 523.8 46.5208C582 47.4013 640 43.5857 698.2 40.0636C756.3 36.6883 814.7 33.7532 872.8 35.2208C931 36.6883 989 42.5584 1047.2 44.026C1105.3 45.4935 1163.7 42.5584 1221.8 45.9338C1280 49.4558 1338 59.1416 1396.2 57.674C1454.3 56.2065 1512.7 43.5857 1570.8 37.1286C1629 30.8182 1687 30.8182 1745.2 34.1935C1803.3 37.7156 1861.7 44.4662 1890.8 47.9883L1920 51.3636V0H1890.8C1861.7 0 1803.3 0 1745.2 0C1687 0 1629 0 1570.8 0C1512.7 0 1454.3 0 1396.2 0C1338 0 1280 0 1221.8 0C1163.7 0 1105.3 0 1047.2 0C989 0 931 0 872.8 0C814.7 0 756.3 0 698.2 0C640 0 582 0 523.8 0C465.7 0 407.3 0 349.2 0C291 0 233 0 174.8 0C116.7 0 58.3 0 29.2 0H0V27.8831Z"
+        fill="#FEC14E" />
+      <path
+        d="M0 92.4545L29.2 99.3519C58.3 106.103 116.7 119.897 174.8 133.986C233 148.221 291 162.896 349.2 161.869C407.3 160.988 465.7 144.258 523.8 130.17C582 115.935 640 104.195 698.2 108.597C756.3 113 814.7 133.545 872.8 140.443C931 147.193 989 140.443 1047.2 132.078C1105.3 123.713 1163.7 114.027 1221.8 111.092C1280 108.157 1338 111.973 1396.2 116.962C1454.3 121.805 1512.7 127.675 1570.8 133.986C1629 140.443 1687 147.193 1745.2 143.818C1803.3 140.443 1861.7 126.648 1890.8 119.897L1920 113V48.4285L1890.8 45.0532C1861.7 41.5311 1803.3 34.7805 1745.2 31.2584C1687 27.8831 1629 27.8831 1570.8 34.1935C1512.7 40.6506 1454.3 53.2714 1396.2 54.7389C1338 56.2064 1280 46.5207 1221.8 42.9986C1163.7 39.6233 1105.3 42.5584 1047.2 41.0909C989 39.6233 931 33.7532 872.8 32.2857C814.7 30.8181 756.3 33.7532 698.2 37.1285C640 40.6506 582 44.4662 523.8 43.5857C465.7 42.5584 407.3 36.6883 349.2 40.6506C291 44.4662 233 58.261 174.8 57.2337C116.7 56.2064 58.3 40.6506 29.2 32.7259L0 24.948V92.4545Z"
+        fill="#F9AD40" />
+      <path
+        d="M0 127.675L29.2 138.388C58.3 149.248 116.7 170.674 174.8 183.882C233 197.09 291 202.079 349.2 197.677C407.3 193.274 465.7 179.479 523.8 167.739C582 155.999 640 146.313 698.2 148.661C756.3 151.156 814.7 165.831 872.8 174.636C931 183.442 989 186.377 1047.2 178.599C1105.3 170.674 1163.7 152.183 1221.8 147.781C1280 143.378 1338 153.064 1396.2 158.934C1454.3 164.804 1512.7 166.858 1570.8 168.766C1629 170.674 1687 172.729 1745.2 169.207C1803.3 165.831 1861.7 157.026 1890.8 152.623L1920 148.221V110.065L1890.8 116.962C1861.7 123.713 1803.3 137.508 1745.2 140.883C1687 144.258 1629 137.508 1570.8 131.051C1512.7 124.74 1454.3 118.87 1396.2 114.027C1338 109.038 1280 105.222 1221.8 108.157C1163.7 111.092 1105.3 120.778 1047.2 129.143C989 137.508 931 144.258 872.8 137.508C814.7 130.61 756.3 110.065 698.2 105.662C640 101.26 582 113 523.8 127.235C465.7 141.323 407.3 158.053 349.2 158.934C291 159.961 233 145.286 174.8 131.051C116.7 116.962 58.3 103.168 29.2 96.4169L0 89.5195V127.675Z"
+        fill="#F49835" />
+      <path
+        d="M0 162.896L29.2 171.701C58.3 180.506 116.7 198.117 174.8 210.297C233 222.625 291 229.375 349.2 228.935C407.3 228.495 465.7 220.57 523.8 208.39C582 196.209 640 179.479 698.2 177.131C756.3 174.636 814.7 186.377 872.8 196.209C931 205.895 989 213.819 1047.2 208.39C1105.3 202.96 1163.7 184.469 1221.8 180.506C1280 176.544 1338 187.404 1396.2 194.742C1454.3 202.079 1512.7 205.895 1570.8 208.83C1629 211.765 1687 213.819 1745.2 208.83C1803.3 203.987 1861.7 192.247 1890.8 186.377L1920 180.506V145.286L1890.8 149.688C1861.7 154.091 1803.3 162.896 1745.2 166.271C1687 169.793 1629 167.739 1570.8 165.831C1512.7 163.923 1454.3 161.869 1396.2 155.999C1338 150.129 1280 140.443 1221.8 144.845C1163.7 149.248 1105.3 167.739 1047.2 175.664C989 183.442 931 180.506 872.8 171.701C814.7 162.896 756.3 148.221 698.2 145.726C640 143.378 582 153.064 523.8 164.804C465.7 176.544 407.3 190.339 349.2 194.742C291 199.144 233 194.155 174.8 180.947C116.7 167.739 58.3 146.313 29.2 135.453L0 124.74V162.896Z"
+        fill="#EE832D" />
+      <path
+        d="M0 294.974H29.2C58.3 294.974 116.7 294.974 174.8 294.974C233 294.974 291 294.974 349.2 294.974C407.3 294.974 465.7 294.974 523.8 294.974C582 294.974 640 294.974 698.2 294.974C756.3 294.974 814.7 294.974 872.8 294.974C931 294.974 989 294.974 1047.2 294.974C1105.3 294.974 1163.7 294.974 1221.8 294.974C1280 294.974 1338 294.974 1396.2 294.974C1454.3 294.974 1512.7 294.974 1570.8 294.974C1629 294.974 1687 294.974 1745.2 294.974C1803.3 294.974 1861.7 294.974 1890.8 294.974H1920V177.571L1890.8 183.441C1861.7 189.312 1803.3 201.052 1745.2 205.895C1687 210.884 1629 208.83 1570.8 205.895C1512.7 202.96 1454.3 199.144 1396.2 191.806C1338 184.469 1280 173.609 1221.8 177.571C1163.7 181.534 1105.3 200.025 1047.2 205.454C989 210.884 931 202.96 872.8 193.274C814.7 183.441 756.3 171.701 698.2 174.196C640 176.544 582 193.274 523.8 205.454C465.7 217.635 407.3 225.56 349.2 226C291 226.44 233 219.69 174.8 207.362C116.7 195.182 58.3 177.571 29.2 168.766L0 159.961V294.974Z"
+        fill="#E76E27" />
+    </svg>
+
+  </div>
+
+
+  <div id="fee-register">
+    <section id="register" class="text-white body-font">
+      <div class="container mx-auto flex px-5 pt-36 pb-16 items-center justify-center flex-col  max-w-screen-xl">
+        <div class="text-center lg:w-2/3 w-full">
+          <h1 class="title-font sm:text-4xl text-3xl mb-5 font-bold text-white">REGISTER</h1>
+          <p class="mb-8 leading-relaxed">
+            Pre conference will use virtual conference on Zoom and Live Streaming wuill be available on YouTube on
+            June 2, 2021 in regard to the COVID-19 outbreak.
+          </p>
+          <div class="flex justify-center">
+            <a href="https://stis.eventbrite.com" target="_blank"
+              class="register-btn inline-flex text-white border-0 uppercase shadow-md py-2 px-6 focus:outline-none rounded text-lg">
+              REGISTER
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <div class="divider">
     <svg width="100%" height="200" viewBox="0 0 1920 200" fill="none" xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio=none>
@@ -301,11 +336,27 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    const data = {
+      pre_conference: [
+        {
+          name: "Prof. Pedro Pita Barros",
+          img: "/src/img//speaker/pedro.jpeg",
+          univ: "Universidade Nova de Lisboa, Portugal",
+          description: "Presenter (Shared Decision Making in the Portuguese NHS: choosing wisely)"
+        },
+        {
+          name: "Nucke Widowati Kusumo P., S.Si., M.Sc., Ph.D",
+          img: "src/img/speaker/nucke.jpeg",
+          univ: "Politeknik Statistika STIS",
+          description: "Moderator"
+        },
+      ]
+    }
+  </script>
   <script>
     AOS.init();
   </script>
-  <script src="src/js/commitee.js"></script>
 </body>
 
 </html>
