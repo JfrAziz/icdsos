@@ -4,9 +4,9 @@ const speakerData = {
       type: "day 1",
       name: [
         {
-          name: "Dr. Suhariyanto",
+          name: "The Chief Statistician of Statistics Indonesia (BPS)",
           type: "Key Note Speaker:",
-          description: "The Chief Statistician of Statistics Indonesia (BPS)",
+          description: "Statistics Indonesia (BPS), Indonesia",
           photo: "src/img/speaker/kecuk.jpeg",
         },
         {
