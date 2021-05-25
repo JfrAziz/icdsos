@@ -21,7 +21,6 @@ const topicsData = {
         { subtopic: "Applied Bayesian Statistics" },
         { subtopic: "Microeconomics Modelling and Applications" },
         { subtopic: "Macroeconomics Modelling and Applications" },
-        { subtopic: "Spatial Statistics" },
         { subtopic: "Econometrics Modelling and Applications" },
         { subtopic: "Quantitative Public Policy and Statistical Analysis" },
         { subtopic: "Applied Statistics on Demography" },
@@ -34,7 +33,7 @@ const topicsData = {
       subtopics: [
         { subtopic: "Official Statistics" },
         { subtopic: "Survey Methodology Developments" },
-        { subtopic: "Data Collection improvements" },
+        { subtopic: "Data Collection Improvements" },
         { subtopic: "Sustainable Development Goals (SDGs) Indicators Estimation" },
         { subtopic: "Small Area Estimation (SAE)" },
         { subtopic: "Non Response and Imputation Methods" },
