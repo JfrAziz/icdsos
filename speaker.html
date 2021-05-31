@@ -135,7 +135,7 @@
       </template>
       <!-- modal -->
       <div class="fixed top-0 left-0 flex items-center justify-center w-full h-full"
-        style="background-color: rgba(0,0,0,.5);" x-show="isModelOpen">
+        style="background-color: rgba(0,0,0,.5);" x-show="isModelOpen" x-cloak>
         <div
           class="flex flex-col w-11/12 sm:w-5/6 lg:w-1/2 max-w-2xl mx-auto rounded-lg border border-gray-300 shadow-xl bg-white"
           @click.away="isModelOpen = false">

@@ -74,3 +74,7 @@ footer {
 .institution:hover .tooltip {
   display: block;
 }
+
+[x-cloak] {
+  display: none;
+}
