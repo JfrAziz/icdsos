@@ -154,7 +154,8 @@
         <!-- <a href="/publication.html" class="mr-5 hover:text-gray-300">PUBLICATIONS</a> -->
         <a href="/dates.html" class="mr-5 hover:text-gray-300">IMPORTANT DATES</a>
         <a href="/program.html" class="mr-5 hover:text-gray-300">PROGRAMS</a>
-        <a href="/commitee.html" class="hover:text-gray-300">COMMITEE</a>
+        <a href="/commitee.html" class="mr-5 hover:text-gray-300">COMMITEE</a>
+        <a href="/preconference.html" class="hover:text-gray-300">PRE-CONFERENCE</a>
       </nav>
       <!-- end default navbar -->
       <!-- humberger button -->
@@ -168,7 +169,7 @@
       <!-- sidebar for small screen -->
       <div class="fixed flex xl:hidden z-40 h-full top-0 left-0 shadow-lg bg-white transition-all duration-300 ease"
         x-show="navOpen" @click.away="navOpen = false" x-transition:enter-start="-left-72"
-        x-transition:enter-end="left-0" x-transition:leave-start="left-0" x-transition:leave-end="-left-72" x-cloak>
+        x-transition:enter-end="left-0" x-transition:leave-start="left-0" x-transition:leave-end="-left-72">
         <div class="flex flex-row justify-around">
           <nav class="w-72 h-screen mt-10 px-3 ">
             <a href="/index.html"
@@ -190,11 +191,11 @@
               </span>
             </a>
             <!-- <a href="/publication.html"
-              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
-              <span class="mx-4 text-lg font-normal">
-                PUBLICATIONS
-              </span>
-            </a> -->
+            class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+            <span class="mx-4 text-lg font-normal">
+              PUBLICATIONS
+            </span>
+          </a> -->
             <a href="/dates.html"
               class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
               <span class="mx-4 text-lg font-normal">
@@ -530,7 +531,7 @@
               <li class="mb-6"><a class="hover:text-gray-200" href="/speaker.html">SPEAKERS</a></li>
               <li class="mb-6"><a class="hover:text-gray-200" href="/registration.html">REGISTRATION</a></li>
               <li class="mb-6"><a class="hover:text-gray-200" href="/program.html">PROGRAM</a></li>
-              <li class="mb-6"><a class="hover:text-gray-200" href="/publication.html">PUBLICATIONS</a></li>
+              <!-- <li class="mb-6"><a class="hover:text-gray-200" href="/publication.html">PUBLICATIONS</a></li> -->
               <li class="mb-6"><a class="hover:text-gray-200" href="/commitee.html">COMMITEE</a></li>
               <li class="mb-6"><a class="hover:text-gray-200" href="/dates.html">DATES</a></li>
             </ul>
@@ -619,6 +620,7 @@
       </p>
     </div>
   </footer>
+  <script src="src/js/livechat.js"></script>
 </body>
 
 </html>
