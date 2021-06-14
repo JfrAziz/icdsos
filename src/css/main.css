@@ -1,5 +1,5 @@
 body {
-  background-color: #FDD280;
+  background-color: #fdd280;
 }
 
 header.scroll {
@@ -7,7 +7,7 @@ header.scroll {
   box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 
-header.scroll nav a:hover{
+header.scroll nav a:hover {
   color: hsl(0, 0%, 66%);
 }
 
@@ -15,14 +15,22 @@ header:not(.scroll) {
   color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
 }
 
 #main {
-  background-image: linear-gradient(hsla(209, 81%, 10%, 0.75), hsla(209, 81%, 10%, 0.75)), url('/src/img/polstat.jpg');
+  background-image: linear-gradient(
+      hsla(209, 81%, 10%, 0.75),
+      hsla(209, 81%, 10%, 0.75)
+    ),
+    url("/src/img/polstat.jpg");
 }
-
 
 #main h1 {
   font-weight: bold;
@@ -30,20 +38,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: white;
 }
 
 #hero-btn {
-  background: #FEC14E;
-  color: #0D467D;
-  transition: all .15s ease
+  background: #fec14e;
+  color: #0d467d;
+  transition: all 0.15s ease;
 }
 
 .register-btn {
-  background-color: #0AA8B4;
-  transition: all .15s ease;
+  background-color: #0aa8b4;
+  transition: all 0.15s ease;
 }
 
 .register-btn:hover {
@@ -55,16 +63,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #call-for-papers {
-  background-color: #FAC347;
+  background-color: #fac347;
 }
 
-#fee-register, 
-#speaker, #comitee, #journal, #program, #timeline {
-  background: linear-gradient(180deg, #E76E27 0%, #FEC14E 100%);
+#fee-register,
+#speaker,
+#comitee,
+#journal,
+#program,
+#timeline {
+  background: linear-gradient(180deg, #e76e27 0%, #fec14e 100%);
 }
 
 #contact-us {
-  background-color: #0AA8B4;
+  background-color: #0aa8b4;
 }
 
 footer {
@@ -77,4 +89,20 @@ footer {
 
 [x-cloak] {
   display: none;
+}
+
+@media (min-width: 1024px) {
+  .grid-custom:last-child:nth-child(4n - 1) {
+    grid-column-end: 7;
+  }
+
+  .grid-custom:nth-last-child(2):nth-child(4n - 2) {
+    grid-column-end: 5;
+  }
+
+  /* Dealing with single orphan */
+
+  .grid-custom:last-child:nth-child(4n - 2) {
+    grid-column-end: 6;
+  }
 }

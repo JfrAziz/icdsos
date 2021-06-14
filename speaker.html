@@ -118,9 +118,9 @@
           <div class="flex flex-col text-center w-full mb-10">
             <h4 class="title-font sm:text-3xl text-2xl mt-20 mb-5 font-bold text-white uppercase" x-text="i.type"></h4>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-8 gap-5">
             <template x-for="s in i.name">
-              <div class="rounded-lg overflow-hidden shadow-lg bg-white w-11/12 sm:w-auto m-auto sm:m-0"
+              <div class="rounded-lg overflow-hidden col-span-2 shadow-lg bg-white w-11/12 sm:w-auto m-auto sm:m-0 grid-custom"
                 x-on:click="$refs.speaker_detail.innerText  = s.profile; isModelOpen = true" style="cursor: pointer;">
                 <div class="bg-cover hover:bg-gray">
                   <img alt="content" class="object-cover object-center h-72 w-full" x-bind:src="s.photo">
@@ -140,7 +140,7 @@
         <div
           class="flex flex-col w-11/12 sm:w-5/6 lg:w-1/2 max-w-2xl mx-auto rounded-lg border border-gray-300 shadow-xl bg-white"
           @click.away="isModelOpen = false">
-          <div class="flex flex-row justify-between px-6 py-4 bg-white rounded-tl-md rounded-tr-md">
+          <div class="flex flex-row justify-between px-6 py-4 bg-white rounded-sm">
             <p class="font-semibold text-gray-800">Profile</p>
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" @click="isModelOpen = false"
               style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg">
