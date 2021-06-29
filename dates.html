@@ -5,23 +5,46 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- information -->
   <link rel="shortcut icon" href="src/img/logo-white-small.png" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="src/css/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap"
-    rel="stylesheet">
-  <title>ICDSOS : International Conference on Data Science and Official Statistics</title>
+  <title>IMPORTANT DATES | ICDSOS : International Conference on Data Science and Official Statistics</title>
   <meta name="description"
     content="ICDSOS : Strengthening The Contribution of Data Science and Official Statistics To The Society in The Disruption Era">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- social media tags -->
+  <meta property="og:title" content="ICDSOS : International Conference on Data Science and Official Statistics">
+  <meta property="og:image" content="https://icdsos.stis.ac.id/src/img/icdsos.png">
+  <meta property="og:url" content="https://icdsos.stis.ac.id">
+  <meta property="og:description"
+    content="ICDSOS : Strengthening The Contribution of Data Science and Official Statistics To The Society in The Disruption Era.">
+
+  <!-- twitter meta tags -->
+  <meta name="twitter:title" content="ICDSOS : International Conference on Data Science and Official Statistics">
+  <meta name="twitter:description"
+    content="ICDSOS : Strengthening The Contribution of Data Science and Official Statistics To The Society in The Disruption Era.">
+  <meta name="twitter:image" content="https://icdsos.stis.ac.id/src/img/icdsos.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="https://icdsos.stis.ac.id" />
+  <meta name="twitter:creator" content="@STISJKT" />
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css">
+  <link rel="stylesheet" href="src/css/main.css">
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap">
+
+  <!-- javascript -->
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+  <script src="src/js/init.js"></script>
 </head>
 
-<body>
+<body x-data="data()">
   <header class="text-gray-700 body-font bg-transparent fixed z-50 w-full top-0 transition duration-500 ease"
-    x-data="headerData" :class="{ scroll : isScroll}" @scroll.window="isScroll = isScrolling()">
+    :class="{ scroll : isScroll}" @scroll.window="isScroll = isScrolling()">
     <div class="container mx-auto flex flex-wrap px-5 py-3 flex-row items-center max-w-screen-xl mx-auto">
       <!-- logo -->
       <a href="/index.html" class="flex title-font font-medium items-center md:mb-0">
@@ -31,21 +54,17 @@
       <!-- end logo -->
       <!-- default navbar -->
       <nav class="hidden xl:flex xl:ml-auto flex-wrap items-center text-base justify-center">
-        <a href="/index.html" class="mr-5 hover:text-gray-300">HOME</a>
-        <a href="/speaker.html" class="mr-5 hover:text-gray-300">SPEAKERS</a>
-        <a href="/registration.html" class="mr-5 hover:text-gray-300">REGISTRATION</a>
-        <!-- <a href="/publication.html" class="mr-5 hover:text-gray-300">PUBLICATIONS</a> -->
-        <a href="/dates.html" class="mr-5 hover:text-gray-300">IMPORTANT DATES</a>
-        <a href="/program.html" class="mr-5 hover:text-gray-300">PROGRAMS</a>
-        <a href="/commitee.html" class="mr-5 hover:text-gray-300">COMMITEE</a>
-        <a href="/preconference.html" class="hover:text-gray-300">PRE-CONFERENCE</a>
+        <template x-for="i in menu">
+          <a :href="i.link" class="ml-5 hover:text-gray-100 uppercase" :class="{ 'text-gray-700' : isScroll}" x-text="
+              i.name"></a>
+        </template>
       </nav>
       <!-- end default navbar -->
       <!-- humberger button -->
-      <button class="xl:hidden ml-auto flex flex-col bg-transparent hover:bg-gray-100 p-1 items-center"
-        @click="navOpen = !navOpen">
+      <button class="xl:hidden ml-auto flex flex-col bg-transparent p-1 items-center" @click="navOpen = !navOpen">
         <template x-for="i in 3">
-          <span class="w-6 h-1 bg-gray-700 mb-1"></span>
+          <span class="w-6 h-1 mb-1 bg-white hover:bg-gray-100"
+            :class="{ 'bg-gray-700 hover:bg-gray-500' : isScroll}"></span>
         </template>
       </button>
       <!-- end humberger button -->
@@ -55,58 +74,18 @@
         x-transition:enter-end="left-0" x-transition:leave-start="left-0" x-transition:leave-end="-left-72">
         <div class="flex flex-row justify-around">
           <nav class="w-72 h-screen mt-10 px-3 ">
-            <a href="/index.html"
-              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
-              <span class="mx-4 text-lg font-normal">
-                HOME
-              </span>
-            </a>
-            <a href="/speaker.html"
-              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
-              <span class="mx-4 text-lg font-normal">
-                SPEAKERS
-              </span>
-            </a>
-            <a href="/registration.html"
-              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
-              <span class="mx-4 text-lg font-normal">
-                REGISTRATION
-              </span>
-            </a>
-            <!-- <a href="/publication.html"
-            class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
-            <span class="mx-4 text-lg font-normal">
-              PUBLICATIONS
-            </span>
-          </a> -->
-            <a href="/dates.html"
-              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
-              <span class="mx-4 text-lg font-normal">
-                IMPORTANT DATES
-              </span>
-            </a>
-            <a href="/program.html"
-              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
-              <span class="mx-4 text-lg font-normal">
-                PROGRAMS
-              </span>
-            </a>
-            <a href="/commitee.html"
-              class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
-              <span class="mx-4 text-lg font-normal">
-                COMMITEE
-              </span>
-            </a>
+            <template x-for="i in menu">
+              <a :href="i.link"
+                class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-3 transition-colors duration-200 text-gray-600 rounded-lg ">
+                <span class="mx-4 text-lg font-normal uppercase" x-text="i.name" />
+              </a>
+            </template>
           </nav>
         </div>
       </div>
       <!-- end sidebar for small screen -->
     </div>
   </header>
-  <script>
-    const headerData = { isScroll: false, navOpen: false }
-    const isScrolling = () => document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80
-  </script>
 
   <section id="timeline" class="text-gray-600 body-font">
     <div class="container mx-auto w-full max-w-screen-xl px-5 pt-36 pb-16 ">
@@ -136,97 +115,97 @@
             <div class="h-full w-6 flex items-center justify-center">
               <div class="h-full w-1 pointer-events-none bg-white""></div>
             </div>
-            <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
-          </div>
-          <div class="bg-white border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-            <h3 class="mb-3 font-bold text-gray-600 text-xl">Pre Conference</h3>
-            <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-              June 2<sup>nd</sup>, 2021</p>
-            </p>
-          </div>
-        </div>
-        <!-- left -->
-        <div class="flex flex-row-reverse md:contents">
-          <div class="col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md"
-            style="background-color: #0AA8B4;">
-            <h3 class="font-semibold font-bold text-white text-xl mb-1">Deadline of Paper Submission</h3>
-            <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
-              August 31<sup>st</sup>, 2021
-            </p>
-          </div>
-          <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
-            <div class="h-full w-6 flex items-center justify-center">
-              <div class="h-full w-1 pointer-events-none bg-white"></div>
+            <div class=" w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
             </div>
-            <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
-          </div>
-        </div>
-        <!-- right -->
-        <div class="flex md:contents">
-          <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
-            <div class="h-full w-6 flex items-center justify-center">
-              <div class="h-full w-1 pointer-events-none bg-white"></div>
+            <div class="bg-white border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 class="mb-3 font-bold text-gray-600 text-xl">Pre Conference</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                June 2<sup>nd</sup>, 2021</p>
+              </p>
             </div>
-            <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
           </div>
-          <div class="bg-white border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-            <h3 class="mb-3 font-bold text-gray-600 text-xl">Notification of Acceptance</h3>
-            <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-              October 1<sup>st</sup>, 2021</p>
-            </p>
-          </div>
-        </div>
-        <!-- left -->
-        <div class="flex flex-row-reverse md:contents">
-          <div
-            class="bg-white border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
-            <h3 class="font-semibold font-bold text-gray-600 text-xl mb-1">Deadline for Camera
-              Ready/Final Version</h3>
-            <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-              October 24<sup>th</sup>, 2021
-            </p>
-          </div>
-          <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
-            <div class="h-full w-6 flex items-center justify-center">
-              <div class="h-full w-1 pointer-events-none bg-white"></div>
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div class="col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md"
+              style="background-color: #0AA8B4;">
+              <h3 class="font-semibold font-bold text-white text-xl mb-1">Deadline of Paper Submission</h3>
+              <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
+                August 31<sup>st</sup>, 2021
+              </p>
             </div>
-            <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
-          </div>
-        </div>
-        <!-- right -->
-        <div class="flex md:contents">
-          <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
-            <div class="h-full w-6 flex items-center justify-center">
-              <div class="h-full w-1 pointer-events-none bg-white"></div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 pointer-events-none bg-white"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
             </div>
-            <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
           </div>
-          <div class="bg-white border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-            <h3 class="mb-3 font-bold text-gray-600 text-xl">Deadline for Slide and
-              Recording Submission</h3>
-            <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-              November 1<sup>st</sup>, 2021</p>
-            </p>
-          </div>
-        </div>
-        <!-- left -->
-        <div class="flex flex-row-reverse md:contents">
-          <div class="col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md"
-            style="background-color: #0AA8B4;">
-            <h3 class="font-semibold font-bold text-white text-xl mb-1">Conference Day</h3>
-            <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
-              November 13<sup>th</sup> - 14<sup>th</sup> 2021
-            </p>
-          </div>
-          <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
-            <div class="h-full w-6 flex items-center justify-center">
-              <div class="h-full w-1 pointer-events-none bg-white"></div>
+          <!-- right -->
+          <div class="flex md:contents">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 pointer-events-none bg-white"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
             </div>
-            <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
+            <div class="bg-white border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 class="mb-3 font-bold text-gray-600 text-xl">Notification of Acceptance</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                October 1<sup>st</sup>, 2021</p>
+              </p>
+            </div>
+          </div>
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div
+              class="bg-white border border-gray-300 col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md">
+              <h3 class="font-semibold font-bold text-gray-600 text-xl mb-1">Deadline for Camera
+                Ready/Final Version</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                October 24<sup>th</sup>, 2021
+              </p>
+            </div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 pointer-events-none bg-white"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="flex md:contents">
+            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 pointer-events-none bg-white"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
+            </div>
+            <div class="bg-white border border-gray-300 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+              <h3 class="mb-3 font-bold text-gray-600 text-xl">Deadline for Slide and
+                Recording Submission</h3>
+              <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                November 1<sup>st</sup>, 2021</p>
+              </p>
+            </div>
+          </div>
+          <!-- left -->
+          <div class="flex flex-row-reverse md:contents">
+            <div class="col-start-1 col-end-5 p-4 rounded-lg my-4 md:ml-auto mr-auto md:mr-0 shadow-md"
+              style="background-color: #0AA8B4;">
+              <h3 class="font-semibold font-bold text-white text-xl mb-1">Conference Day</h3>
+              <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
+                November 13<sup>th</sup> - 14<sup>th</sup> 2021
+              </p>
+            </div>
+            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+              <div class="h-full w-6 flex items-center justify-center">
+                <div class="h-full w-1 pointer-events-none bg-white"></div>
+              </div>
+              <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full shadow" style="background-color: #0AA8B4;"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
 
   <div class="divider">
@@ -287,13 +266,9 @@
           <div class="hidden md:block">
             <h3 class="font-medium text-lg title-font mb-8">SITE LINKS</h3>
             <ul class="grid grid-cols-2 gap-x-5">
-              <li class="mb-6"><a class="hover:text-gray-200" href="/speaker.html">SPEAKERS</a></li>
-              <li class="mb-6"><a class="hover:text-gray-200" href="/registration.html">REGISTRATION</a></li>
-              <li class="mb-6"><a class="hover:text-gray-200" href="/program.html">PROGRAM</a></li>
-              <!-- <li class="mb-6"><a class="hover:text-gray-200" href="/publication.html">PUBLICATIONS</a></li> -->
-              <li class="mb-6"><a class="hover:text-gray-200" href="/commitee.html">COMMITEE</a></li>
-              <li class="mb-6"><a class="hover:text-gray-200" href="/dates.html">DATES</a></li>
-              <li class="mb-6"><a class="hover:text-gray-200" href="/preconference.html">PRE CONFERENCE</a></li>
+              <template x-for="i in menu">
+                <li class="mb-6"><a class="hover:text-gray-200 uppercase" :href="i.link" x-text="i.name"></a></li>
+              </template>
             </ul>
           </div>
           <div>
