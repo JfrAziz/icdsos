@@ -11,7 +11,10 @@ let data = function () {
         name: "speakers",
         link : "speaker.html"
       },
-      
+      {
+        name: "publication",
+        link : "publication.html"
+      },
       {
         name: "important dates",
         link : "dates.html"
