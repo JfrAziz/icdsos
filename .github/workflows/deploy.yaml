@@ -37,8 +37,8 @@ jobs:
               leftprotoport=17/1701
               rightprotoport=17/1701
               right=${{ secrets.VPN_SERVER }}
-              ike=aes256-sha1-modp2048
-              esp=aes256-sha1
+              ike=3des-sha1-modp1024
+              esp=3des-sha1
           EOF
 
       - name: Add Ipsec Secret
@@ -78,12 +78,12 @@ jobs:
         
       - name: Restart Services
         run: | 
-          service strongswan-starter restart
+          service ipsec restart
           service xl2tpd restart
         
       - name: Connect To VPN
         run: |
-          service strongswan-starter start
+          service ipsec start
           service xl2tpd start
           ipsec up VPN1
           echo "c VPN1" > /var/run/xl2tpd/l2tp-control
