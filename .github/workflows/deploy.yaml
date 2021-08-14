@@ -84,7 +84,6 @@ jobs:
           sudo service ipsec start
           sudo service xl2tpd start
           sudo ipsec up VPN1
-          sudo echo "c VPN1" > /var/run/xl2tpd/l2tp-control
 
       - name: Ping Server
         run: |
