@@ -11,10 +11,79 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Network Manager
-        env:
-          VPN_SERVER: ${{ secrets.VPN_SERVER }}
-          VPN_PSK: ${{ secrets.VPN_PSK }}
-          VPN_USRNAME: ${{ secrets.VPN_USRNAME }}
-          VPN_PASSWORD: ${{ secrets.VPN_PASSWORD }}
         run: |
-          echo $VPN_SERVER
+          sudo apt-get -y update && apt-get -y upgrade
+          sudo apt-get -y install strongswan xl2tpd libstrongswan-standard-plugins libstrongswan-extra-plugins
+      - name: Add Ipsec Conf
+        run: |
+          cat > /etc/ipsec.conf <<EOF
+          config setup
+          conn %default
+              ikelifetime=60m
+              keylife=20m
+              rekeymargin=3m
+              keyingtries=1
+              keyexchange=ikev1
+              authby=secret
+          
+          conn VPN1
+              auto=add
+              keyexchange=ikev1
+              authby=secret
+              type=transport
+              left=%defaultroute
+              leftprotoport=17/1701
+              rightprotoport=17/1701
+              right=${{ secrets.VPN_SERVER }}
+              ike=aes256-sha1-modp2048
+              esp=aes256-sha1
+          EOF
+
+      - name: Add Ipsec Secret
+        run: |
+          cat > /etc/ipsec.secrets <<EOF
+          : PSK "${{ secrets.VPN_PSK }}"
+          EOF
+          chmod 600 /etc/ipsec.secrets
+
+      - name: Add Ipsec Options
+        run: |
+          cat > /etc/xl2tpd/xl2tpd.conf <<EOF
+          [lac VPN1]
+          lns = $VPN_SERVER_IPV4
+          ppp debug = yes
+          pppoptfile = /etc/ppp/options.l2tpd.client
+          length bit = yes
+          EOF
+
+          cat > /etc/ppp/options.l2tpd.client <<EOF
+          ipcp-accept-local
+          ipcp-accept-remote
+          refuse-eap
+          require-chap
+          noccp
+          noauth
+          mtu 1280
+          mru 1280
+          noipdefault
+          defaultroute
+          usepeerdns
+          connect-delay 5000
+          name "${{ secrets.VPN_USERNAME }}"
+          password "${{ secrets.VPN_PASSWORD }}"
+          EOF
+          chmod 600 /etc/ppp/options.l2tpd.client
+
+        - name: Restart Services
+          service strongswan-starter restart
+          service xl2tpd restart
+        
+        - name: Connect To VPN
+          run: |
+            service strongswan-starter start
+            service xl2tpd start
+            ipsec up VPN1
+            echo "c VPN1" > /var/run/xl2tpd/l2tp-control
+
+        - name: |
+            ping ${{ secrets.SERVER_URL }} -c 4
