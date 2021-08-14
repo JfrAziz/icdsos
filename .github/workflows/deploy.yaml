@@ -8,83 +8,14 @@ on:
 jobs:
   deploy:
     name: Deploy To Server
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-      - name: Install Network Manager
+      - name: Add VPN Connection
         run: |
-          sudo apt-get -y update
-          sudo apt-get -y install strongswan xl2tpd libstrongswan-standard-plugins libstrongswan-extra-plugins
-      - name: Add Ipsec Conf
-        run: |
-          sudo tee -a /etc/ipsec.conf << EOF
-          config setup
-          conn %default
-              ikelifetime=60m
-              keylife=20m
-              rekeymargin=3m
-              keyingtries=1
-              keyexchange=ikev1
-              authby=secret
-          
-          conn VPN1
-              auto=add
-              keyexchange=ikev1
-              authby=secret
-              type=transport
-              left=%defaultroute
-              leftprotoport=17/1701
-              rightprotoport=17/1701
-              right=${{ secrets.VPN_SERVER }}
-              ike=3des-sha1-modp1024
-              esp=3des-sha1
-          EOF
-
-      - name: Add Ipsec Secret
-        run: |
-          sudo tee -a /etc/ipsec.secrets << EOF
-          : PSK "${{ secrets.VPN_PSK }}"
-          EOF
-          sudo chmod 600 /etc/ipsec.secrets
-
-      - name: Add Ipsec Options
-        run: |
-          sudo tee -a /etc/xl2tpd/xl2tpd.conf << EOF
-          [lac VPN1]
-          lns = $VPN_SERVER_IPV4
-          ppp debug = yes
-          pppoptfile = /etc/ppp/options.l2tpd.client
-          length bit = yes
-          EOF
-
-          sudo tee -a /etc/ppp/options.l2tpd.client << EOF
-          ipcp-accept-local
-          ipcp-accept-remote
-          refuse-eap
-          require-chap
-          noccp
-          noauth
-          mtu 1280
-          mru 1280
-          noipdefault
-          defaultroute
-          usepeerdns
-          connect-delay 5000
-          name "${{ secrets.VPN_USERNAME }}"
-          password "${{ secrets.VPN_PASSWORD }}"
-          EOF
-          sudo chmod 600 /etc/ppp/options.l2tpd.client
-        
-      - name: Restart Services
-        run: | 
-          sudo service ipsec restart
-          sudo service xl2tpd restart
-        
+          Add-VpnConnection -Name "VPN" -ServerAddress "${{ secrets.VPN_SERVER }}" -TunnelType "L2tp" -L2tpPsk "${{ secrets.VPN_PSK }}" -PassThru
       - name: Connect To VPN
         run: |
-          sudo service ipsec start
-          sudo service xl2tpd start
-          sudo ipsec up VPN1
-
+          rasdial.exe "Poisson" "${{ secrets.VPN_USERNAME }}" "${{ secrets.VPN_PASSWORD }}"
       - name: Ping Server
         run: |
-          ping ${{ secrets.SERVER_URL }} -c 4
+          ping ${{ secrets.SERVER_URL }}
