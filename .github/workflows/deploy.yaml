@@ -16,7 +16,7 @@ jobs:
           sudo apt-get -y install strongswan xl2tpd libstrongswan-standard-plugins libstrongswan-extra-plugins
       - name: Add Ipsec Conf
         run: |
-          sudo cat > /etc/ipsec.conf <<EOF
+          cat > /etc/ipsec.conf <<EOF
           config setup
           conn %default
               ikelifetime=60m
@@ -41,14 +41,14 @@ jobs:
 
       - name: Add Ipsec Secret
         run: |
-          sudo cat > /etc/ipsec.secrets <<EOF
+          cat > /etc/ipsec.secrets <<EOF
           : PSK "${{ secrets.VPN_PSK }}"
           EOF
           sudo chmod 600 /etc/ipsec.secrets
 
       - name: Add Ipsec Options
         run: |
-          sudo cat > /etc/xl2tpd/xl2tpd.conf <<EOF
+          cat > /etc/xl2tpd/xl2tpd.conf <<EOF
           [lac VPN1]
           lns = $VPN_SERVER_IPV4
           ppp debug = yes
@@ -56,7 +56,7 @@ jobs:
           length bit = yes
           EOF
 
-          sudo cat > /etc/ppp/options.l2tpd.client <<EOF
+          cat > /etc/ppp/options.l2tpd.client <<EOF
           ipcp-accept-local
           ipcp-accept-remote
           refuse-eap
