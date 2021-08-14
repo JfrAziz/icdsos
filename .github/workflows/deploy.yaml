@@ -1,0 +1,20 @@
+name: Greeting from Mona
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy To Server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Network Manager
+        env:
+          VPN_SERVER: ${{ secrets.VPN_SERVER }}
+          VPN_PSK: ${{ secrets.VPN_PSK }}
+          VPN_USRNAME: ${{ secrets.VPN_USRNAME }}
+          VPN_PASSWORD: ${{ secrets.VPN_PASSWORD }}
+        run: |
+          echo $VPN_SERVER
