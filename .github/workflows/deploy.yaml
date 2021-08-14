@@ -74,16 +74,18 @@ jobs:
           EOF
           chmod 600 /etc/ppp/options.l2tpd.client
         
-        - name: Restart Services
+      - name: Restart Services
+        run: | 
           service strongswan-starter restart
           service xl2tpd restart
         
-        - name: Connect To VPN
-          run: |
-            service strongswan-starter start
-            service xl2tpd start
-            ipsec up VPN1
-            echo "c VPN1" > /var/run/xl2tpd/l2tp-control
+      - name: Connect To VPN
+        run: |
+          service strongswan-starter start
+          service xl2tpd start
+          ipsec up VPN1
+          echo "c VPN1" > /var/run/xl2tpd/l2tp-control
 
-        - name: |
-            ping ${{ secrets.SERVER_URL }} -c 4
+      - name: Ping Server
+        run: |
+          ping ${{ secrets.SERVER_URL }} -c 4
