@@ -12,11 +12,11 @@ jobs:
     steps:
       - name: Install Network Manager
         run: |
-          sudo apt-get -y update && apt-get -y upgrade
+          sudo apt-get -y update
           sudo apt-get -y install strongswan xl2tpd libstrongswan-standard-plugins libstrongswan-extra-plugins
       - name: Add Ipsec Conf
         run: |
-          cat > /etc/ipsec.conf <<EOF
+          sudo cat > /etc/ipsec.conf <<EOF
           config setup
           conn %default
               ikelifetime=60m
@@ -41,14 +41,14 @@ jobs:
 
       - name: Add Ipsec Secret
         run: |
-          cat > /etc/ipsec.secrets <<EOF
+          sudo cat > /etc/ipsec.secrets <<EOF
           : PSK "${{ secrets.VPN_PSK }}"
           EOF
-          chmod 600 /etc/ipsec.secrets
+          sudo chmod 600 /etc/ipsec.secrets
 
       - name: Add Ipsec Options
         run: |
-          cat > /etc/xl2tpd/xl2tpd.conf <<EOF
+          sudo cat > /etc/xl2tpd/xl2tpd.conf <<EOF
           [lac VPN1]
           lns = $VPN_SERVER_IPV4
           ppp debug = yes
@@ -56,7 +56,7 @@ jobs:
           length bit = yes
           EOF
 
-          cat > /etc/ppp/options.l2tpd.client <<EOF
+          sudo cat > /etc/ppp/options.l2tpd.client <<EOF
           ipcp-accept-local
           ipcp-accept-remote
           refuse-eap
@@ -72,19 +72,19 @@ jobs:
           name "${{ secrets.VPN_USERNAME }}"
           password "${{ secrets.VPN_PASSWORD }}"
           EOF
-          chmod 600 /etc/ppp/options.l2tpd.client
+          sudo chmod 600 /etc/ppp/options.l2tpd.client
         
       - name: Restart Services
         run: | 
-          service strongswan-starter restart
-          service xl2tpd restart
+          sudo service strongswan-starter restart
+          sudo service xl2tpd restart
         
       - name: Connect To VPN
         run: |
-          service strongswan-starter start
-          service xl2tpd start
-          ipsec up VPN1
-          echo "c VPN1" > /var/run/xl2tpd/l2tp-control
+          sudo service strongswan-starter start
+          sudo service xl2tpd start
+          sudo ipsec up VPN1
+          sudo echo "c VPN1" > /var/run/xl2tpd/l2tp-control
 
       - name: Ping Server
         run: |
