@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Add VPN Connection
         run: |
-          Add-VpnConnection -Name "VPN" -ServerAddress "${{ secrets.VPN_SERVER }}" -TunnelType "L2tp" -L2tpPsk "${{ secrets.VPN_PSK }}" -PassThru
+          Add-VpnConnection -Name "VPN" -ServerAddress "${{ secrets.VPN_SERVER }}" -TunnelType "L2tp" -L2tpPsk "${{ secrets.VPN_PSK }}"
       - name: Connect To VPN
         run: |
           rasdial.exe "Poisson" "${{ secrets.VPN_USERNAME }}" "${{ secrets.VPN_PASSWORD }}"
