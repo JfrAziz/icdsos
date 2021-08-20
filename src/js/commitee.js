@@ -78,7 +78,7 @@ const commiteeData = {
           description : "University of Thessaly, Greece"
         },
         {
-          name: "Dr. Fadhilla Zennifa",
+          name: "Dr. Fadilla Zennifa",
           description : "Kyushu University, Japan"
         },
         {
