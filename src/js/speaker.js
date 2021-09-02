@@ -20,7 +20,7 @@ const speakerData = {
           name: "Dr. Margo Yuwono",
           type: "Key Note Speaker:",
           description: "Statistics Indonesia (BPS), Indonesia",
-          photo: "src/img/speaker/pak_margo.png",
+          photo: "src/img/speaker/margo-yuwono.png",
           profile: `
           Dr. Margo Yuwono is the Chief Statistician of Statistics Indonesia (BPS) who has just been inaugurated on June 25, 2021 based on the Presidential Decree of the Republic of Indonesia (Keppres) Number 79/TPA of 2021. Prior to serving as the Chief Statistician, he served as Chief of BPS-Statistics Central Java Province in 2016-2018. Then, he served as Deputy for Social Statistics of BPS in 2018-2020. He then served as a Principal Secretary of BPS before finally being promoted to as the Chief Statistician. \n
           A career in statistics has been indeed planned by the man who was born in Blitar, 1963, since he started his higher education. He took his Diploma III education at the Academy of Statistics (AIS) Jakarta in 1986. Subsequently, he continued his degree to a bachelor's, master's, and doctorate degree at the IPB University, Bogor, Indonesia. He earned his Doctorate in agricultural economics from the IPB University in 2012.
