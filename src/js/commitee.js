@@ -12,7 +12,7 @@ const commiteeData = {
           description : "Advisor"
         },
         {
-          name: "Titik Harsanti, M.Si",
+          name: "Dr. Titik Harsanti, M.Si",
           description : "Advisor"
         },
         {
