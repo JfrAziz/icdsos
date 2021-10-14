@@ -337,6 +337,282 @@ const commiteeData = {
           name: "Novia Budi Parwanto, Ph.D",
           description: "Politeknik Statistika STIS, Indonesia",
         },
+        {
+          name: "Prof. Abuzar Asra",
+          description: "",
+        },
+        {
+          name: "Prof. Bambang Riyanto Trilaksono",
+          description: "",
+        },
+        {
+          name: "Prof. Nicholas T. Longford",
+          description: "",
+        },
+        {
+          name: "Prof. Vassilis Gerogiannis",
+          description: "",
+        },
+        {
+          name: "Prof. Wisnu Jatmiko",
+          description: "",
+        },
+        {
+          name: "Dr. Achmad Syahrul Choir",
+          description: "",
+        },
+        {
+          name: "Dr. Alfatihah Reno Maulani Nuryaningsih Soekri Putri Munaf SST, M.Si.",
+          description: "",
+        },
+        {
+          name: "Dr. Anang Kurnia",
+          description: "",
+        },
+        {
+          name: "Dr. Anindya Apriliyanti",
+          description: "",
+        },
+        {
+          name: "Dr. Ayu Purwarianti",
+          description: "",
+        },
+        {
+          name: "Dr. Budiasih",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dr. Cucu Sumarni",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dr. Eng. Arie Wahyu Wijayanto",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dr. Ernawati Pasaribu",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dr. Erni Tri Astuti",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dr. Hardius Usman",
+          description: "",
+        },
+        {
+          name: "Dr. Irlandia Ginanjar",
+          description: "",
+        },
+        {
+          name: "Dr. Le Hoang Son",
+          description: "",
+        },
+        {
+          name: "Dr. Meindra Sabri",
+          description: "",
+        },
+        {
+          name: "Dr. Nasrudin",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dr. Nusar Hajarisman",
+          description: "",
+        },
+        {
+          name: "Dr. Rindang Bangun Prasetyo",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dr. Siti Muchlisoh",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dr. Tiodora Hadumaon Siagian",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dr. Toni Toharudin",
+          description: "",
+        },
+        {
+          name: "Dr. Waris Marsisno, M.Stat.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dr. Yoshimichi Watanabe",
+          description: "",
+        },
+        {
+          name: "Dr. Yudhie Andriyana",
+          description: "",
+        },
+        {
+          name: "Dr. Yusep Suparman",
+          description: "",
+        },
+        {
+          name: "Ahmad Rafie Pratama, Ph.D.",
+          description: "",
+        },
+        {
+          name: "Aisyah Fitri Yuniasih, SST., SE., M.Si",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Anugerah Karta Monika, S.Si., M.E.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Associate Professor Gour Dasvarma",
+          description: "",
+        },
+        {
+          name: "Budi Yuniarto, SST., M.Si.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Budyanra, M,Stat",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Dwi Wahyu Triscowati SST, M.Si",
+          description: "",
+        },
+        {
+          name: "Febri Wicaksono, M.Si.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Firman M. Firmansyah, M.Sc.",
+          description: "",
+        },
+        {
+          name: "I Made Arcana, Ph.D",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Ibnu Santoso, M.T.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Ika Yuni Wulansari, M.Stat.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Ita Wulandari, M. Si.",
+          description: "",
+        },
+        {
+          name: "Kemas Muhammad Irsan Riza SST.,MT",
+          description: "",
+        },
+        {
+          name: "Khairunnisah, SST, MSE",
+          description: "",
+        },
+        {
+          name: "Lutfi Rahmatuti Maghfiroh, SST, M.T.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Lya Hulliyyatus Suadaa, SST, M.T.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Mirta Dwi Wulandari, SST, MEKK",
+          description: "",
+        },
+        {
+          name: "Muhammad Rausyan Fikri, ST, M.Eng",
+          description: "",
+        },
+        {
+          name: "Neli Agustina, M,Si",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Nori Wilantika, S.S.T., M.T.I.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Novi Hidayat Pusponegoro, SST., M.Stat.",
+          description: "",
+        },
+        {
+          name: "Nucke Widowati Kusumo Projo, S.Si, M.Sc., Ph.D.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Pardomuan Robinson Sihombing SST, M.Stat",
+          description: "",
+        },
+        {
+          name: "Putu Simpen Arini SST.,M.Si",
+          description: "",
+        },
+        {
+          name: "Rani Nooraeni, M.Stat.",
+          description: "",
+        },
+        {
+          name: "Ray Sastri, M.Sc.",
+          description: "",
+        },
+        {
+          name: "Rezzy Eko Caraka, Ph.D.",
+          description: "",
+        },
+        {
+          name: "Ricky Yordani, M.Stat",
+          description: "",
+        },
+        {
+          name: "Risni Julaeni Yuhan, SP., M.Stat",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Robert Kurniawan, M.Si.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Rudi Salam, M.Si.",
+          description: "",
+        },
+        {
+          name: "Sarni Maniar Berliana, M.Si.",
+          description: "",
+        },
+        {
+          name: "Siti Mariyah, M.T.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Sugi Haryanto SST, M.Si.",
+          description: "",
+        },
+        {
+          name: "Takdir, M.T.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
+          name: "Thomhert S. Siadari, Ph.D.",
+          description: "",
+        },
+        {
+          name: "Wa Ode Zuhayeni Madjida, SST, MT",
+          description: "",
+        },
+        {
+          name: "Yohanes Wahyu Trio Pramono SST, MT",
+          description: "",
+        },
+        {
+          name: "Yunarso Anang Sulistiadi, Ph.D.",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
       ],
     },
   ],
