@@ -186,7 +186,7 @@ const commiteeData = {
             },
           ],
         },
-        
+
         {
           name: "Siskarossa Ika Oktora, SST., M.Stat",
           description: "Public Relations and Documentation Section",
@@ -229,7 +229,7 @@ const commiteeData = {
             },
             {
               name: " Gilberth Rulan David Willa ",
-            }
+            },
           ],
         },
       ],
@@ -246,136 +246,84 @@ const commiteeData = {
           description: "University of Thessaly, Greece",
         },
         {
-          name: "Dr. Fadilla Zennifa",
-          description: "Kyushu University, Japan",
-        },
-        {
-          name: "Dr. Yoshimichi Watanabe",
-          description: "University of Yamanashi, Japan",
-        },
-        {
-          name: "Rezzy Eko Caraka, Ph.D.",
-          description: "Seoul National University, South Korea",
-        },
-        {
-          name: "Assoc. Prof. Le Hoang Son",
-          description: "Vietnam National University",
-        },
-        {
           name: "Prof. Wisnu Jatmiko",
           description: "Universitas Indonesia, Indonesia",
-        },
-        {
-          name: "Prof. Bambang Riyanto Trilaksono",
-          description: "Institut Teknologi Bandung, Indonesia",
         },
         {
           name: "Prof. Abuzar Asra",
           description: " Politeknik Statistika STIS, Indonesia",
         },
         {
-          name: "Setia Pramana, Ph.D.",
-          description: "Statistics Indonesia (BPS), Indonesia",
-        },
-        {
-          name: "Dr. Meindra Sabri",
-          description: "Statistics Indonesia (BPS), Indonesia",
-        },
-        {
-          name: "Dr. Nusar Hajarisman",
-          description: "Universitas Islam Bandung, Indonesia",
-        },
-        {
-          name: "Dr. Ayu Purwarianti",
+          name: "Prof. Bambang Riyanto Trilaksono",
           description: "Institut Teknologi Bandung, Indonesia",
         },
         {
-          name: "Dr. Anindya Apriliyanti Pravitasari",
-          description: "Universitas Padjadjaran, Indonesia",
+          name: "Dr. Yoshimichi Watanabe",
+          description: "University of Yamanashi, Japan",
         },
         {
-          name: "Dr. Yusep Suparman",
-          description: "Universitas Padjadjaran, Indonesia",
+          name: "Assoc. Prof. Le Hoang Son",
+          description: "Vietnam National University",
         },
         {
-          name: "Dr. Toni Toharudin",
-          description: "Universitas Padjadjaran, Indonesia",
+          name: "Assoc. Prof. Gour Dasvarma",
+          description: "Flinders University, Australia",
         },
         {
-          name: "Dr. Irlandia Ginanjar",
-          description: "Universitas Padjadjaran, Indonesia",
+          name: "Rezzy Eko Caraka, Ph.D.",
+          description: "Seoul National University, South Korea",
         },
         {
-          name: "Dr. Yudhie Andriyana",
-          description: "Universitas Padjadjaran, Indonesia",
-        },
-        {
-          name: "Dr. Anang Kurnia",
-          description: "IPB University, Indonesia",
-        },
-        {
-          name: "Dr. Achmad Syahrul Choir",
-          description: "Politeknik Statistika STIS, Indonesia",
-        },
-        {
-          name: "Dr. Siti Muchlisoh",
-          description: "Politeknik Statistika STIS, Indonesia",
-        },
-        {
-          name: "Dr. Mohammad Dokhi",
-          description: "Politeknik Statistika STIS, Indonesia",
-        },
-        {
-          name: "Dr. Ernawati Pasaribu",
-          description: "Politeknik Statistika STIS, Indonesia",
-        },
-        {
-          name: "Dr. Cucu Sumarni",
-          description: "Politeknik Statistika STIS, Indonesia",
+          name: "Setia Pramana, Ph.D.",
+          description: "Statistics Indonesia (BPS), Indonesia",
         },
         {
           name: "Novia Budi Parwanto, Ph.D",
           description: "Politeknik Statistika STIS, Indonesia",
         },
         {
-          name: "Prof. Abuzar Asra",
-          description: "",
+          name: "I Made Arcana, Ph.D",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
-          name: "Prof. Bambang Riyanto Trilaksono",
-          description: "",
+          name: "Nucke Widowati Kusumo Projo, S.Si, M.Sc., Ph.D.",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
-          name: "Prof. Nicholas T. Longford",
-          description: "",
+          name: "Thomhert S. Siadari, Ph.D.",
+          description: "University of Science and Technology, Korea",
         },
         {
-          name: "Prof. Vassilis Gerogiannis",
-          description: "",
+          name: "Yunarso Anang Sulistiadi, Ph.D.",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
-          name: "Prof. Wisnu Jatmiko",
-          description: "",
+          name: "Ahmad Rafie Pratama, Ph.D.",
+          description: "Universitas Islam Indonesia, Indonesia",
         },
         {
           name: "Dr. Achmad Syahrul Choir",
-          description: "",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Dr. Alfatihah Reno Maulani Nuryaningsih Soekri Putri Munaf SST, M.Si.",
-          description: "",
+          description: "Statistics Indonesia (BPS), Indonesia",
         },
         {
           name: "Dr. Anang Kurnia",
-          description: "",
+          description: "IPB University, Indonesia",
         },
         {
           name: "Dr. Anindya Apriliyanti",
-          description: "",
+          description: "Universitas Padjadjaran, Indonesia",
         },
         {
           name: "Dr. Ayu Purwarianti",
-          description: "",
+          description: "Institut Teknologi Bandung, Indonesia",
+        },
+        {
+          name: "Dr. Azka Ubaidillah",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Dr. Budiasih",
@@ -398,20 +346,24 @@ const commiteeData = {
           description: "Politeknik Statistika STIS, Indonesia",
         },
         {
+          name: "Dr. Fadilla Zennifa",
+          description: "Kyushu University, Japan",
+        },
+        {
           name: "Dr. Hardius Usman",
-          description: "",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Dr. Irlandia Ginanjar",
-          description: "",
-        },
-        {
-          name: "Dr. Le Hoang Son",
-          description: "",
+          description: "Universitas Padjadjaran, Indonesia",
         },
         {
           name: "Dr. Meindra Sabri",
-          description: "",
+          description: "Statistics Indonesia (BPS), Indonesia",
+        },
+        {
+          name: "Dr. Mohammad Dokhi",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Dr. Nasrudin",
@@ -419,14 +371,10 @@ const commiteeData = {
         },
         {
           name: "Dr. Nusar Hajarisman",
-          description: "",
+          description: "Universitas Islam Bandung, Indonesia",
         },
         {
           name: "Dr. Rindang Bangun Prasetyo",
-          description: "Politeknik Statistika STIS, Indonesia",
-        },
-        {
-          name: "Dr. Siti Muchlisoh",
           description: "Politeknik Statistika STIS, Indonesia",
         },
         {
@@ -434,28 +382,24 @@ const commiteeData = {
           description: "Politeknik Statistika STIS, Indonesia",
         },
         {
+          name: "Dr. Siti Muchlisoh",
+          description: "Politeknik Statistika STIS, Indonesia",
+        },
+        {
           name: "Dr. Toni Toharudin",
-          description: "",
+          description: "Universitas Padjadjaran, Indonesia",
         },
         {
           name: "Dr. Waris Marsisno, M.Stat.",
           description: "Politeknik Statistika STIS, Indonesia",
         },
         {
-          name: "Dr. Yoshimichi Watanabe",
-          description: "",
-        },
-        {
           name: "Dr. Yudhie Andriyana",
-          description: "",
+          description: "Universitas Padjadjaran, Indonesia",
         },
         {
           name: "Dr. Yusep Suparman",
-          description: "",
-        },
-        {
-          name: "Ahmad Rafie Pratama, Ph.D.",
-          description: "",
+          description: "Universitas Padjadjaran, Indonesia",
         },
         {
           name: "Aisyah Fitri Yuniasih, SST., SE., M.Si",
@@ -464,10 +408,6 @@ const commiteeData = {
         {
           name: "Anugerah Karta Monika, S.Si., M.E.",
           description: "Politeknik Statistika STIS, Indonesia",
-        },
-        {
-          name: "Associate Professor Gour Dasvarma",
-          description: "",
         },
         {
           name: "Budi Yuniarto, SST., M.Si.",
@@ -479,7 +419,7 @@ const commiteeData = {
         },
         {
           name: "Dwi Wahyu Triscowati SST, M.Si",
-          description: "",
+          description: "Statistics Indonesia (BPS), Indonesia",
         },
         {
           name: "Febri Wicaksono, M.Si.",
@@ -487,11 +427,7 @@ const commiteeData = {
         },
         {
           name: "Firman M. Firmansyah, M.Sc.",
-          description: "",
-        },
-        {
-          name: "I Made Arcana, Ph.D",
-          description: "Politeknik Statistika STIS, Indonesia",
+          description: "Stony Brook University, USA",
         },
         {
           name: "Ibnu Santoso, M.T.",
@@ -503,15 +439,15 @@ const commiteeData = {
         },
         {
           name: "Ita Wulandari, M. Si.",
-          description: "",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Kemas Muhammad Irsan Riza SST.,MT",
-          description: "",
+          description: "Statistics Indonesia (BPS), Indonesia",
         },
         {
           name: "Khairunnisah, SST, MSE",
-          description: "",
+          description: "Statistics Indonesia (BPS), Indonesia",
         },
         {
           name: "Lutfi Rahmatuti Maghfiroh, SST, M.T.",
@@ -523,11 +459,11 @@ const commiteeData = {
         },
         {
           name: "Mirta Dwi Wulandari, SST, MEKK",
-          description: "",
+          description: "Statistics Indonesia (BPS), Indonesia",
         },
         {
           name: "Muhammad Rausyan Fikri, ST, M.Eng",
-          description: "",
+          description: "Sampoerna University, Indonesia",
         },
         {
           name: "Neli Agustina, M,Si",
@@ -539,35 +475,27 @@ const commiteeData = {
         },
         {
           name: "Novi Hidayat Pusponegoro, SST., M.Stat.",
-          description: "",
-        },
-        {
-          name: "Nucke Widowati Kusumo Projo, S.Si, M.Sc., Ph.D.",
           description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Pardomuan Robinson Sihombing SST, M.Stat",
-          description: "",
+          description: "IPB University, Indonesia",
         },
         {
           name: "Putu Simpen Arini SST.,M.Si",
-          description: "",
+          description: "Statistics Indonesia (BPS), Indonesia",
         },
         {
           name: "Rani Nooraeni, M.Stat.",
-          description: "",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Ray Sastri, M.Sc.",
-          description: "",
-        },
-        {
-          name: "Rezzy Eko Caraka, Ph.D.",
-          description: "",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Ricky Yordani, M.Stat",
-          description: "",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Risni Julaeni Yuhan, SP., M.Stat",
@@ -579,11 +507,11 @@ const commiteeData = {
         },
         {
           name: "Rudi Salam, M.Si.",
-          description: "",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Sarni Maniar Berliana, M.Si.",
-          description: "",
+          description: "Politeknik Statistika STIS, Indonesia",
         },
         {
           name: "Siti Mariyah, M.T.",
@@ -591,27 +519,19 @@ const commiteeData = {
         },
         {
           name: "Sugi Haryanto SST, M.Si.",
-          description: "",
+          description: "Statistics Indonesia (BPS), Indonesia",
         },
         {
           name: "Takdir, M.T.",
           description: "Politeknik Statistika STIS, Indonesia",
         },
         {
-          name: "Thomhert S. Siadari, Ph.D.",
-          description: "",
-        },
-        {
           name: "Wa Ode Zuhayeni Madjida, SST, MT",
-          description: "",
+          description: "Statistics Indonesia (BPS), Indonesia",
         },
         {
           name: "Yohanes Wahyu Trio Pramono SST, MT",
-          description: "",
-        },
-        {
-          name: "Yunarso Anang Sulistiadi, Ph.D.",
-          description: "Politeknik Statistika STIS, Indonesia",
+          description: "Statistics Indonesia (BPS), Indonesia",
         },
       ],
     },
