@@ -102,8 +102,9 @@
               <div
                 class="rounded-lg overflow-hidden col-span-2 shadow-lg bg-white w-11/12 sm:w-auto m-auto sm:m-0 grid-custom"
                 x-on:click="$refs.speaker_detail.innerText  = s.profile; isModelOpen = true" style="cursor: pointer;">
-                <div class="bg-cover hover:bg-gray">
+                <div class="bg-cover hover:bg-gray relative">
                   <img alt="content" class="object-cover object-center h-72 w-full" x-bind:src="s.photo">
+                  <div class="text-sm text-white absolute bottom-0 bg-opacity-70 bg-gray-500 uppercase px-2" x-text="s.type"></div>
                 </div>
                 <div class="mx-6 my-4">
                   <div class="font-medium text-base text-gray-darker mb-4" x-text="s.name"></div>

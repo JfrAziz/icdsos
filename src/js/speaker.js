@@ -17,13 +17,12 @@ const speakerData = {
       type: "Main Conference Day 1",
       name: [
         {
-          name: "Dr. Margo Yuwono",
-          type: "Key Note Speaker:",
+          name: "Dr. Eng. Imam Machdi M.T.",
+          type: "Key Note Speaker",
           description: "Statistics Indonesia (BPS), Indonesia",
-          photo: "src/img/speaker/margo-yuwono.png",
+          photo: "src/img/speaker/imam-machdi.jpeg",
           profile: `
-          Dr. Margo Yuwono is the Chief Statistician of Statistics Indonesia (BPS) who has just been inaugurated on June 25, 2021 based on the Presidential Decree of the Republic of Indonesia (Keppres) Number 79/TPA of 2021. Prior to serving as the Chief Statistician, he served as Chief of BPS-Statistics Central Java Province in 2016-2018. Then, he served as Deputy for Social Statistics of BPS in 2018-2020. He then served as a Principal Secretary of BPS before finally being promoted to as the Chief Statistician. \n
-          A career in statistics has been indeed planned by the man who was born in Blitar, 1963, since he started his higher education. He took his Diploma III education at the Academy of Statistics (AIS) Jakarta in 1986. Subsequently, he continued his degree to a bachelor's, master's, and doctorate degree at the IPB University, Bogor, Indonesia. He earned his Doctorate in agricultural economics from the IPB University in 2012.
+          Dr. Eng. Imam Machdi M.T. is the Deputy of Methodology and Statistical Information of Statistics Indonesia (BPS).
           `,
         },
         {
@@ -42,7 +41,7 @@ const speakerData = {
         },
         {
           name: "Prof. Budi Nurani Ruchjana",
-          type: "Invited Speaker:",
+          type: "Invited Speaker",
           description: "Universitas Padjajaran, Indonesia",
           photo: "src/img/speaker/budi-nurani-ruchjana.png",
           profile: `Prof. Budi Nurani Ruchjana is a Professor of Statistics at Department of Mathematics, Faculty of Mathematics and Natural Sciences, Universitas Padjadjaran, Indonesia. She received the Ph.D. degree in Mathematics and Natural Sciences at Institut Teknologi Bandung, Indonesia (2002). Her research interest is Spatio Temporal Modeling, Stochastics Processes, Geostatistics, and its applications. She is a Head of Consortium Spatio Temporal Data Mining and Optimization Modeling in Indonesia and also she is a Head of Indonesian Ethnoscience Studies Center Universitas Padjadjaran. She was a President of the Indonesian Mathematical Society and the Dean of Faculty of Mathematics and Natural Sciences University of Padjadjaran for period 2012-2016. For 2015-2018 she is a Member of the Commission for Developing Countries International Mathematical Union (CDC IMU).`,
@@ -54,28 +53,28 @@ const speakerData = {
       name: [
         {
           name: "Prof. Jean-Bernard Chatelain",
-          type: "Invited Speaker:",
+          type: "Invited Speaker",
           description: "University Paris 1 Pantheon Sorbonne, France",
           photo: "src/img/speaker/jean-bernard-chatelain .jpeg",
           profile: `Prof. Jean-Bernard Chatelain is Professor in Economics & Finance at Universitaire de France, Université Paris 1 Panthéon-Sorbonne. He has focused his research on questions of the link between credit and finance and economic activity (business investment, growth, cycles). More fundamentally, his recent research focuses on the link between economic theories and the possibility of testing them by statistical methods with as little error as possible.`,
         },
         {
           name: "Dr. Alexander Kowarik",
-          type: "Invited Speaker:",
+          type: "Invited Speaker",
           description: "Statistics Austria",
           photo: "src/img/speaker/alexandr-kowarik.jpeg",
           profile: `Dr. Alexander Kowarik is the Head of Methods at Statistics Austria. He received the Doctor of Technology from Vienna University of Technology in 2015. He was a methodological researcher in Statistics Austria from 2008 to 2014 and Consultant of World Bank Group for generating synthetic population data in 2017. He wrote multiple publications about computational statistics using R programming and statistical package.`,
         },
         {
           name: "Assoc. Prof. Woojoo Lee, Ph.D",
-          type: "Invited Speaker:",
+          type: "Invited Speaker",
           description: "Seoul National University, South Korea",
           photo: "src/img/speaker/woojoo-lee.jpeg",
           profile: `Woojoo Lee is an associate professor in Graduate School of Public Health, Seoul National University. He received the Ph.D. in statistics from Seoul National University in 2010 and Postdoctoral degree in Medical Epidemiology and Biostatistics from Karolinska Institutet in 2012. His research interests include complex structured data analysis, application of machine learning in epidemiology, likelihood inference, causal reference, meta analysis, and bias analysis. `,
         },
         {
           name: "Dr. Walter J. Radermacher",
-          type: "Invited Speaker:",
+          type: "Invited Speaker",
           description:
             "President of FENSTATS and Former Director General of Eurostat",
           photo: "src/img/speaker/walter-j-radermacher.jpeg",
@@ -88,15 +87,15 @@ const speakerData = {
       name: [
         {
           name: "Dr. Eng. Arie Wahyu Wijayanto, SST., M.T",
-          type: "Invited Speaker:",
-          description: "Moderator Day 1",
+          type: "Moderator Day 1",
+          description: "Politeknik Statistika STIS",
           photo: "src/img/speaker/arie.jpeg",
           profile: `Moderator Day 1`,
         },
         {
           name: "Nucke Widowati Kusumo P., S.Si., M.Sc., Ph.D",
-          type: "Invited Speaker:",
-          description: "Moderator Day 2",
+          type: "Moderator Day 2",
+          description: "Politeknik Statistika STIS",
           photo: "src/img/speaker/nucke.jpeg",
           profile: `Moderator Day 2`,
         },
