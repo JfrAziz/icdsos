@@ -87,14 +87,14 @@ const speakerData = {
       name: [
         {
           name: "Dr. Eng. Arie Wahyu Wijayanto, SST., M.T",
-          type: "Moderator Day 1",
+          type: "Plenary Moderator Day 1",
           description: "Politeknik Statistika STIS",
           photo: "src/img/speaker/arie.jpeg",
           profile: `Moderator Day 1`,
         },
         {
           name: "Nucke Widowati Kusumo P., S.Si., M.Sc., Ph.D",
-          type: "Moderator Day 2",
+          type: "Plenary Moderator Day 2",
           description: "Politeknik Statistika STIS",
           photo: "src/img/speaker/nucke.jpeg",
           profile: `Moderator Day 2`,

@@ -31,7 +31,6 @@
   <!-- stylesheet -->
   <link rel="stylesheet" href="src/css/tailwind.css">
   <link rel="stylesheet" href="src/css/main.css">
-  <link rel="stylesheet" href="src/css/table.css">
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -72,7 +71,7 @@
       <!-- sidebar for small screen -->
       <div class="fixed flex xl:hidden z-40 h-full top-0 left-0 shadow-lg bg-white transition-all duration-300 ease"
         x-show="navOpen" @click.away="navOpen = false" x-transition:enter-start="-left-72"
-        x-transition:enter-end="left-0" x-transition:leave-start="left-0" x-transition:leave-end="-left-72">
+        x-transition:enter-end="left-0" x-transition:leave-start="left-0" x-transition:leave-end="-left-72" x-cloak>
         <div class="flex flex-row justify-around">
           <nav class="w-72 h-screen mt-10 px-3 ">
             <template x-for="i in menu">
@@ -88,246 +87,53 @@
     </div>
   </header>
 
-  <section id="program" class="text-gray-600 body-font">
+  <section id="program" class="text-gray-600 body-font" x-data="programData">
     <div class="container px-5 pt-36 pb-16  mx-auto max-w-screen-xl">
       <div class="flex flex-col text-center w-full mb-20">
         <h1 class="title-font sm:text-4xl text-3xl mb-5 font-bold text-white">PROGRAMS</h1>
 
-        <div class="flex flex-col text-center w-full mb-10">
-          <h4 class="title-font sm:text-3xl text-2xl mt-20 mb-0 font-bold text-white uppercase">PRE-CONFERENCE</h4>
-        </div>
-
-        <!-- Table -->
-        <table class="tg bg-white">
-          <thead>
-            <tr>
-              <th class="tg-ml4m">Day/Date</th>
-              <th class="tg-ml4m">Time<br>(GMT +7)</th>
-              <th class="tg-ml4m">Schedule</th>
-              <th class="tg-ml4m">PIC</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="tg-g145" rowspan="11">June 2, 2021</td>
-              <td class="tg-olc1">14.00 - 14.05</td>
-              <td class="tg-h90x">Opening from Moderator</td>
-              <td class="tg-cxdr">Moderator</td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">14.05 - 14.15</td>
-              <td class="tg-h90x">Greetings from Director of Politeknik Statistika STIS</td>
-              <td class="tg-cxdr">Event Section</td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">14.15 - 15.00</td>
-              <td class="tg-h90x">Speaker’s Presentation: <br> Prof. Pedro Pita Barros (Universidade Nova de Lisboa,
-                Portugal – Topic: “Shared Decision Making in the Portuguese NHS: choosing wisely?”)</td>
-              <td class="tg-cxdr"></td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">15.00 - 15.05</td>
-              <td class="tg-h90x">Ice Breaking: Photo Session</td>
-              <td class="tg-cxdr">Documentation Section</td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">15.05 - 15.50</td>
-              <td class="tg-h90x">Q&A</td>
-              <td class="tg-cxdr">Moderator</td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">15.50 - 16.00</td>
-              <td class="tg-h90x">Closing from Moderator</td>
-              <td class="tg-cxdr">Moderator</td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- End of Table -->
-
-        <div class="flex flex-col text-center w-full mb-10">
-          <h4 class="title-font sm:text-3xl text-2xl mt-20 mb-0 font-bold text-white uppercase">DAY 1</h4>
-        </div>
-        <!-- Tabel -->
-        <table class="tg bg-white">
-          <thead>
-            <tr>
-              <th class="tg-ml4m title-font">Day/Date</th>
-              <th class="tg-ml4m title-font">Time<br>(GMT +7)</th>
-              <th class="tg-ml4m title-font">Schedule</th>
-              <th class="tg-ml4m title-font">PIC</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="tg-g145 title-font" rowspan="19">November 13, 2021</td>
-              <td class="tg-zll9 title-font" style="text-align: center;">07.15 - 07.45</td>
-              <td class="tg-zll9 title-font">Registration</td>
-              <td class="tg-xbtx title-font" rowspan="2">All Committees</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">07.45 - 08.00</td>
-              <td class="tg-fia5 title-font">Opening ICDSOS Playback</td>
-            </tr>
-            <tr>
-              <td class="tg-g145 title-font" colspan="2">OPENING CEREMONY</td>
-              <td class="tg-fia5 title-font"></td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">08.00 - 08.05</td>
-              <td class="tg-fia5 title-font">Opening by MC</td>
-              <td class="tg-xbtx title-font" rowspan="9">MC</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">08.05 - 08.08</td>
-              <td class="tg-fia5 title-font">National Anthem Indonesia Raya</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">08.08 - 08.13</td>
-              <td class="tg-fia5 title-font">Politeknik Statistika STIS Teaser Playback</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">08.13 - 08.23</td>
-              <td class="tg-fia5 title-font">Opening Remarks : Chairman ICDSOS</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">08.23 - 08.33</td>
-              <td class="tg-fia5 title-font">Opening Remarks : Director of Politeknik Statistika<br>STIS</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">08.33 - 08.38</td>
-              <td class="tg-fia5 title-font">Teaser of Politeknik Statistika STIS</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">08.38 - 08.53</td>
-              <td class="tg-fia5 title-font">Opening Remarks :<br>The Chief Statistician of BPS</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">08.53 - 08.55</td>
-              <td class="tg-fia5 title-font">Teaser of ICDSOS</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">08.55 - 09.00</td>
-              <td class="tg-fia5 title-font">Info about parallel room and moderator in each room for ICDSOS</td>
-            </tr>
-            <tr>
-              <td class="tg-g145 title-font" colspan="2">PLENARY SESSION I</td>
-              <td class="tg-fia5 title-font"></td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">09.00 - 12.00</td>
-              <td class="tg-fia5 title-font">Keynote Speaker:<br>The Chief Statistician of Statistics Indonesia
-                (BPS)<br>(theme: Official Statistics)<br><br>
-                Invited Speaker:<br>1. Prof. Tsuyoshi Murata (Tokyo Institute of Technology, Japan – Topic: Data Science
-                and AI)<br><br>2. Dr. Arturo Martinez Jr (Asian Development Bank – Topic: Poverty Mapping in Official
-                Statistics)<br><br>
-                3. Prof. Budi Nurani Ruchjana (Universitas Padjajaran, Indonesia – Topic: Time Series Modelling and
-                Application)</td>
-              <td class="tg-xbtx title-font">PLENARY MODERATOR</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">12.00 - 13.00</td>
-              <td class="tg-fia5 title-font">Session Break</td>
-              <td class="tg-fia5 title-font"></td>
-            </tr>
-            <tr>
-              <td class="tg-g145 title-font" colspan="2">PARALLEL SESSION</td>
-              <td class="tg-fia5 title-font"></td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">13.00 - 14.30</td>
-              <td class="tg-fia5 title-font">Parallel Session (1)</td>
-              <td class="tg-fia5 title-font">Moderator</td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">14.30 - 14.45</td>
-              <td class="tg-fia5 title-font">Session Break</td>
-              <td class="tg-fia5 title-font"></td>
-            </tr>
-            <tr>
-              <td class="tg-fia5x title-font">14.45 - 16.00</td>
-              <td class="tg-fia5 title-font">Parallel Session (2)</td>
-              <td class="tg-fia5 title-font">Moderator</td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- End of Table -->
-
-        <div class="flex flex-col text-center w-full mb-10">
-          <h4 class="title-font sm:text-3xl text-2xl mt-20 mb-0 font-bold text-white uppercase">DAY 2</h4>
-        </div>
-
-        <!-- Table -->
-        <table class="tg bg-white">
-          <thead>
-            <tr>
-              <th class="tg-r9bi">Day/Date</th>
-              <th class="tg-r9bi">Time<br>(GMT +7)</th>
-              <th class="tg-r9bi">Schedule</th>
-              <th class="tg-r9bi">PIC</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="tg-olc1" rowspan="11">November 14, 2021</td>
-              <td class="tg-olc1">08.00 - 08.05</td>
-              <td class="tg-h90x">Video ICDSOS</td>
-              <td class="tg-cxdr">All Committees</td>
-            </tr>
-            <tr>
-              <td class="tg-olc1" colspan="2">PARALLEL SESSION</td>
-              <td class="tg-cxdr"></td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">08.05 - 09.35</td>
-              <td class="tg-h90x">Parallel Session (3)</td>
-              <td class="tg-cxdr">Moderator</td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">09.35 - 10.00</td>
-              <td class="tg-h90x">Session Break</td>
-              <td class="tg-cxdr"></td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">10.00 - 12.00</td>
-              <td class="tg-h90x">Parallel Session (4)</td>
-              <td class="tg-cxdr">Moderator</td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">12.00 - 13.00</td>
-              <td class="tg-h90x">Session Break</td>
-              <td class="tg-cxdr"></td>
-            </tr>
-            <tr>
-              <td class="tg-olc1" colspan="2">PLENARY SESSION II</td>
-              <td class="tg-cxdr"></td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">13.00 - 16.00</td>
-              <td class="tg-h90x">Invited Speaker:<br>1. Prof. Jean-Bernard Chatelain (University Paris 1 Pantheon
-                Sorbonne, France – Topic: Econometrics and Development Economics)<br><br>2. Dr. Alexander Kowarik
-                (Statistics Austria – Topic: Modern Official Statistics, R for Official Statistics)<br><br>3. Assoc.
-                Prof. Woojoo Lee, Ph.D.(Seoul National University, South Korea – Topic: Applied Statistics on Cohort
-                Analysis)<br><br>4. Dr. Walter J. Radermacher (President of Federation of European National Statistical
-                Societies <br>(FENSTATS) and Former Director General of Eurostat – Topic: Official Statistics in Europe)
-              </td>
-              <td class="tg-cxdr">Plenary Moderator</td>
-            </tr>
-            <tr>
-              <td class="tg-olc1" colspan="2">CLOSING</td>
-              <td class="tg-cxdr"></td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">16.00 - 16.30</td>
-              <td class="tg-h90x">Announcement (Best Paper and Best Presenter)</td>
-              <td class="tg-cxdr" rowspan="2">MC</td>
-            </tr>
-            <tr>
-              <td class="tg-olc1">16.30 - 17.00</td>
-              <td class="tg-h90x">Closing: Head of PPPM as Technical Advisor</td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- End of Table -->
+        <template x-for="p in programs">
+          <div>
+            <div class="flex flex-col text-center w-full mb-10">
+              <h4 class="title-font sm:text-3xl text-2xl mt-20 mb-0 font-bold text-white uppercase" x-text="p.type"></h4>
+              <div class="text-sm text-white uppercase font-bold text-gray-200" x-text="p.date"></div>
+            </div>
+            <table class="w-full bg-gray-50 table-auto border-collapse divide-y divide-gray-200 shadow-md">
+              <thead>
+                <tr class="py-2 ">
+                  <th class="whitespace-nowrap font-bold text-gray-darker py-2">Time (GMT +7)</th>
+                  <th class="whitespace-nowrap font-bold text-gray-darker py-2">Schedule</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <template x-for="sc in p.rundown">
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap" >
+                      <div class="px-2" x-text="sc.time"></div>
+                    </td>
+                    <td class="text-left">
+                      <div class="px-2" x-html="sc.schedule"></div>
+                      <template x-if="sc.subschedule">
+                        <div class="px-2">
+                          <table>
+                            <template x-for="(subsc, index) in sc.subschedule">
+                              <tr>
+                                <td>
+                                  <div class="p-4" x-text="index+1"></div>
+                                </td>
+                                <td><div x-html="subsc.content"></div></td>
+                              </tr>
+                            </template>
+                          </table>
+                        </div>
+                      </template>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </template>
       </div>
     </div>
 
@@ -482,6 +288,7 @@
   </footer>
 
   <script src="src/js/livechat.js"></script>
+  <script src="src/js/programs.js"></script>
 </body>
 
 </html>
