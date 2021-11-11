@@ -20,7 +20,7 @@ const speakerData = {
           name: "Dr. Eng. Imam Machdi M.T.",
           type: "Key Note Speaker",
           description: "Statistics Indonesia (BPS), Indonesia",
-          photo: "src/img/speaker/imam-machdi.jpeg",
+          photo: "src/img/speaker/imam-machdi.png",
           profile: `
           Dr. Eng. Imam Machdi M.T. is the Deputy of Methodology and Statistical Information of Statistics Indonesia (BPS).
           `,
