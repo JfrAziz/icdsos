@@ -73,7 +73,7 @@ const programData = {
         },
         {
           time: "08.50 - 08.57",
-          schedule: "Performance (Welcome Dance)",
+          schedule: "Student Performance (Welcome Dance)",
         },
         {
           time: "08.57 - 09.00",
@@ -82,7 +82,7 @@ const programData = {
         },
         {
           time: "09.00 - 12.00",
-          schedule: "<a class='font-bold' style='color: #0aa8b4' href='http://s.stis.ac.id/icdsos-yt-panel-day1'>Plenary Session I</a>",
+          schedule: "<span class='font-bold'>Plenary Session I (<a style='color: #0aa8b4' href='http://s.stis.ac.id/icdsos-yt-panel-day1'>YouTube</a>)</span>",
           subschedule: [
             {
               content: `<span class='font-bold'>Prof. Tsuyoshi Murata</span> (Tokyo Institute of Technology, Japan) <br/>
@@ -149,7 +149,7 @@ const programData = {
           },
           {
             time: "13.00 - 16.00",
-            schedule: "<a class='font-bold' style='color: #0aa8b4'  href='http://s.stis.ac.id/icdsos-yt-panel-day2'>Plenary Session II</a>",
+            schedule: "<span class='font-bold'>Plenary Session II (<a style='color: #0aa8b4' href='http://s.stis.ac.id/icdsos-yt-panel-day2'>YouTube</a>)</span>",
             subschedule: [
               {
                 content: `<span class='font-bold'>Prof. Jean-Bernard Chatelain</span> (University Paris 1 Pantheon Sorbonne, France) <br/>
