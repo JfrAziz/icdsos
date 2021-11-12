@@ -50,12 +50,12 @@ h6 {
 }
 
 .register-btn {
-  background-color: #0aa8b4;
+  background-color: #0a9faa;
   transition: all 0.15s ease;
 }
 
 .register-btn:hover {
-  background-color: #087e86;
+  background-color: #0c9099;
 }
 
 #hero-btn:hover {
