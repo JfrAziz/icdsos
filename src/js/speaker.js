@@ -10,8 +10,6 @@ const speakerData = {
           description: "Universidade Nova de Lisboa, Portugal",
           photo: "src/img/speaker/prof-pedro.jpeg",
           profile: `Pedro Pita Barros is Professor of Economics at Universidade Nova de Lisboa, Portugal where he teaches industrial organization and health economics. He is also a research fellow at the Centre for Economic Policy Research (London). dro Pita Barros’ research focuses on issues on health economics and on regulation and competition policy. His work has covered different topics including: health expenditure determinants, waiting lists, bargaining in health care, competition policy in Portugal and in the European Union, among others. His research has appeared in many academic journals (such as the Journal of Health Economics, Health Economics, Economic Journal, European Economic Review, Journal of Industrial Economics, Journal of Economics and Management Strategy, International Journal of Health Care Finance and Economics, Health Care Management Science, among others). Pedro Pita Barros has also contributed to several books, and has published several books on health economics (written in Portuguese). Recent ones include the Handbook of Health Economics Vol II (co-editor with Mark Pauly and Tom McGuire) and Health Economics – an IO Perspective (co-authored with Xavier Martinez-Giralt). dro Pita Barros is currently Editor of the International Journal of Health Care Finance and Economics and Associate Editor of Journal of Health Economics, Health Economics, and Health Care Management Science.  He has served as Member of the Board of the Portuguese Energy Regulator (2005/2006) and on the Governmental Commission for the Financial Sustainability of the National Health Service (2006/2007). Over time he has acted as consultant for both private and public entities, in Portugal and at the European level, in the areas of health economics, competition policy and economic regulation.`,
-          topic: ``,
-          link: ""
         },
       ],
     },
@@ -26,8 +24,6 @@ const speakerData = {
           profile: `
           Dr. Eng. Imam Machdi M.T. is the Deputy of Methodology and Statistical Information of Statistics Indonesia (BPS).
           `,
-          topic: ``,
-          link: ""
         },
         {
           name: "Prof. Tsuyoshi Murata",
