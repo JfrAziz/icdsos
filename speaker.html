@@ -109,6 +109,8 @@
                 <div class="mx-6 my-4">
                   <div class="font-medium text-base text-gray-darker mb-4" x-text="s.name"></div>
                   <p class="font-normal text-gray-dark text-sm mb-2" x-text="s.description"></p>
+                  <p class="font-semibold text-gray-dark text-sm mb-4 mt-4" x-text="s.topic"></p>
+                  <a class="font-bold text-blue-600 text-sm mb-2" :href="s.link" x-text="s.link != ''? 'Download Presentation' : ''"></a>
                 </div>
               </div>
             </template>
