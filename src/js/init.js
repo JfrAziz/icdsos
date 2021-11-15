@@ -24,17 +24,21 @@ let data = function () {
         link : "program.html"
       },
       {
+        name: "awards",
+        link : "awards.html"
+      },
+      {
         name: "commitee",
         link : "commitee.html"
       },
       {
-        name: "pre conference",
+        name: "pre_conference",
         link : "preconference.html"
       },
       {
         name: "registration",
         link : "registration.html"
-      },
+      }
     ],
     isScrolling: () =>
       document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80,
